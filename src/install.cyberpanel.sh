@@ -98,6 +98,7 @@ else
     echo "...Perl modules OK"
     echo
 fi
+
 #
 # --- [Revolutionary Tech] Install Tarpit Dependencies (Multi-Distro) ---
 #
@@ -108,25 +109,16 @@ if [ -f /usr/bin/apt-get ]; then
     print "    > Detected apt package manager (Debian/Ubuntu)."
     export DEBIAN_FRONTEND=noninteractive
     apt-get update -y > /dev/null 2>&1
-    
-    # Install DKMS to build the kernel module, and the addons
     apt-get install xtables-addons-common xtables-addons-dkms -y > /dev/null 2>&1
-    
-    # Load the module
     modprobe xt_TARPIT
-    
     print "    [+] Tarpit dependencies installed."
 
 elif [ -f /usr/bin/yum ]; then
     # --- This is a Red Hat, CentOS, or AlmaLinux system ---
     print "    > Detected yum package manager (RHEL/CentOS/AlmaLinux)."
-    
     yum install epel-release -y > /dev/null 2>&1
     yum install xtables-addons-kmod xtables-addons -y > /dev/null 2>&1
-    
-    # Load the module
     modprobe xt_TARPIT
-    
     print "    [+] Tarpit dependencies installed."
 else
     print "    ${redl}WARNING:${greym} Could not find apt or yum. Tarpit dependencies must be installed manually."
