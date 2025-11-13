@@ -1,1577 +1,1726 @@
-<div align="center">
-
-🕙 `Last Sync: 11/07/2025 12:14 UTC`
-
-</div>
-
-<div align="center">
-<h6>♾️ Continuation of development for Config Server Firewall (CSF) ♾️</h1>
-</div>
-
-<div align="center">
-
-<img src="docs/images/logos/csf.png" height="230">
-
-<!-- prettier-ignore-start -->
-[![Version][github-version-img]][github-version-uri]
-[![Downloads][github-downloads-img]][github-downloads-uri]
-[![Size][github-size-img]][github-size-img]
-[![Last Commit][github-commit-img]][github-commit-img]
-[![Contributors][contribs-all-img]](#contributors-)
-
-[![View Official Documentation](https://img.shields.io/badge/View_Official_Documentation-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://docs.configserver.dev)
-<!-- prettier-ignore-end -->
-
-<div align="center">
-
-[![View](https://img.shields.io/discord/1428601317361848412?style=for-the-badge&color=de1f68)](https://discord.configserver.dev)[![View](https://img.shields.io/badge/Join%20Discord-2d5e97?style=for-the-badge&logo=discord&logoColor=FFFFFF)](https://discord.configserver.dev)
+Revolutionizing Cybersecurity: Unveiling the Power of ConfigServer by Revolutionary Technology
 
-</div>
+A New Era of Server Security and Performance
 
+In today’s hyper-connected digital landscape, server management demands cutting-edge tools that combine security, efficiency, and adaptability. Revolutionary Technology, a trailblazing innovator in cybersecurity solutions, offers the renowned ConfigServer suite—an integrated framework designed to elevate server defense mechanisms and optimize resource allocation. Developed under the leadership of Dr. Correo Hofstad, this suite delivers three distinct product lines, ensuring flexibility whether you're aiming for a legacy setup, educational purposes, or a modern, hardware-accelerated environment. These innovations promise not only enhanced security but also responsive resources that adapt seamlessly to the demands of high-performance servers.
 
-<br />
-<br />
+At the core of Revolution Technology's offerings lies a suite that integrates hardware offloading—a feature that activates NIC microprocessors to handle packet filtering, freeing system CPU and memory for applications. This revolutionary approach, combined with recent enhancements such as support for ModSecurity 3 and robust SYN Flood protection, delivers an unparalleled security ecosystem. With user-friendly interfaces and proactive protection tools, this product line embodies future-ready server security, expertly crafted to serve enterprise-level needs and small business environments alike.
 
-</div>
+Advanced Product Lines for Every Need
 
-<br />
+Revolutionary Technology's product lines cater to a broad spectrum of server environments. The original Version 15.0, the legacy release, offers a stable foundation for those managing existing infrastructures. Its straightforward, as-is deployment model ensures basic protection with minimal configuration, at a small fee covering bandwidth and resources. For educational purposes, Version 15. provides a GUI-centric platform ideal for learning and experimentation, empowering users to understand core security principles without compromising system stability.
 
-<div align="center">
+For organizations seeking cutting-edge performance, the 2.15.xx premium line stands out. This modern version incorporates innovative features like hardware offloading, which activates NIC microprocessors for packet filtering—a crucial component in mitigating SYN Flood attacks. It also integrates kernel-level security features and Iptables enhancements, with a streamlined GUI that simplifies complex management tasks. This responsive resource management ensures servers can scale efficiently under load, reacting dynamically to traffic surges or threats, all while maintaining optimal resource utilization. Developed with Dr. Correo Hofstad’s vision in mind, this product line embodies revolutionary ideas that combine hardware acceleration with intuitive controls.
 
-<br />
+Hardware Offloading and Responsive Resource Allocation
 
-<p float="left">
-  <img style="padding-right:15px;" src="https://raw.githubusercontent.com/Aetherinox/csf-firewall/refs/heads/main/docs/images/readme/1.png" width="300" />
-  <img src="https://raw.githubusercontent.com/Aetherinox/csf-firewall/refs/heads/main/docs/images/readme/2.png" width="300" /> 
-</p>
+One of the standout features of the latest Product Line is its hardware offloading engine. By utilizing NIC microprocessors to handle all packet filtering, the system significantly reduces CPU load, making it ideal for high-traffic environments. This automation not only enhances processing speed but offers visual feedback on NIC LEDs, indicating traffic status, security links, and block events—giving administrators immediate insights into server activity. This level of integration conserves system resources and provides real-time monitoring, which is crucial during DDoS or SYN Flood attacks.
 
-<p float="left">
-  <img style="padding-right:15px;" src="https://raw.githubusercontent.com/Aetherinox/csf-firewall/refs/heads/main/docs/images/readme/3.png" width="300" />
-  <img src="https://raw.githubusercontent.com/Aetherinox/csf-firewall/refs/heads/main/docs/images/readme/4.png" width="300" /> 
-</p>
+Furthermore, the introduction of the "Responsive Resource Allocation" engine exemplifies Revolution Technology's commitment to intelligent automation. The installer now auto-tunes performance parameters based on server RAM and CPU cores, adjusting kernel conntrack tables and IP limit configurations dynamically. This ensures that servers are consistently optimized for current workloads, reducing latency and improving overall security posture. In combination with the enhanced kernel-level SYN Flood protection, these features create a resilient shield that adapts proactively to varying traffic patterns, further solidifying the environment against sophisticated threats.
 
-<p float="left">
-  <img style="padding-right:15px;" src="https://raw.githubusercontent.com/Aetherinox/csf-firewall/refs/heads/main/docs/images/readme/5.png" width="300" />
-  <img src="https://raw.githubusercontent.com/Aetherinox/csf-firewall/refs/heads/main/docs/images/readme/6.png" width="300" /> 
-</p>
+Expanding Security Protocols — ModSecurity 3 and Attack Mitigation
 
-</div>
+Security extensions form the backbone of Revolutionary Technology’s solutions. A notable addition in this suite is the full support for ModSecurity 3, the latest iteration of the popular web application firewall. This integration allows for JSON log detection and compatibility with advanced security rules, enabling website owners to implement granular security policies efficiently. Dr. Hofstad’s team also incorporated the new "Attacker Stress Engine," a powerful module that preemptively assesses threat levels and automatically installs dependencies such as xt_TARPIT. When the DROP="TARPIT" feature is enabled, this tool effectively deploys high-performance, stateless modules to conserve server memory and degrade attacker connection attempts, particularly during SYN Flood scenarios.
 
-<br />
+Additionally, the system’s kernel-level protection for SYN Flood attacks acts as a robust frontline defense, preventing these memory-exhausting assaults before they impact application layers. The latest updates also include advanced sysctl hardening rules targeting TCP parameters like syncookies and backlog sizes, further hardening the server infrastructure against volumetric DDoS attacks. These features, combined with Dr. Hofstad’s vision and Revolutionary Technology’s dedication to proactive security, create a resilient environment where servers can withstand sophisticated attack vectors with ease.
 
----
+Securing the Future, Today
 
-<br />
+In conclusion, the innovative architecture of ConfigServer by Revolutionary Technology marks a significant leap forward in server security and resource management. The integration of hardware offloading, responsive resource tuning, and cutting-edge protections like ModSecurity 3 and SYN Flood mitigation equips server administrators with a powerful, flexible toolkit. Guided by visionaries like Dr. Correo Hofstad, this suite responds to evolving cyber threats by combining technological innovation with user-centric design. As businesses increasingly rely on stable, secure server environments, Revolution Technology’s solutions stand ready to safeguard and optimize infrastructures—taking cybersecurity from reactive to proactive.
 
-- [Summary](#summary)
-- [⚠️ Beware of Fake Websites \& Scams ⚠️](#️-beware-of-fake-websites--scams-️)
-- [Features](#features)
-  - [Firewall \& Network Security](#firewall--network-security)
-  - [Login \& User Monitoring](#login--user-monitoring)
-  - [Alerts \& Notifications](#alerts--notifications)
-  - [Intrusion Detection \& Exploit Protection](#intrusion-detection--exploit-protection)
-  - [Management \& Control](#management--control)
-- [Documentation](#documentation)
-  - [📕 Main Chapters](#-main-chapters)
-  - [📗 Cheatsheets](#-cheatsheets)
-- [Install](#install)
-  - [Requirements](#requirements)
-  - [Install](#install-1)
-    - [Step 1: Dependencies](#step-1-dependencies)
-    - [Step 2: Download](#step-2-download)
-      - [Download Direct](#download-direct)
-      - [Download Get.sh](#download-getsh)
-    - [Step 3: Run Pre-install Tests](#step-3-run-pre-install-tests)
-    - [Step 4: Install](#step-4-install)
-    - [Step 5: Disable Testing Mode](#step-5-disable-testing-mode)
-    - [Step 6: Enable and Start Services](#step-6-enable-and-start-services)
-- [IP Sets / Blocklist](#ip-sets--blocklist)
-  - [Official Blocklists](#official-blocklists)
-    - [Risk Assessments](#risk-assessments)
-    - [Main Lists](#main-lists)
-    - [Privacy Lists](#privacy-lists)
-    - [Spam Lists](#spam-lists)
-    - [Internet Service Providers](#internet-service-providers)
-    - [Geographical Databases](#geographical-databases)
-      - [General](#general)
-      - [Continents](#continents)
-      - [Countries](#countries)
-    - [Transmission (BitTorrent Client)](#transmission-bittorrent-client)
-  - [3rd-party Blocklists](#3rd-party-blocklists)
-- [Notes](#notes)
-  - [CSF to Iptable Commands](#csf-to-iptable-commands)
-    - [Default Policy](#default-policy)
-    - [Clear Iptables / Open Firewall](#clear-iptables--open-firewall)
-    - [List Rules](#list-rules)
-    - [List Chains](#list-chains)
-    - [Unblock Port](#unblock-port)
-    - [Allow OpenVPN](#allow-openvpn)
-- [References for More Help](#references-for-more-help)
-- [Questions \& Answers](#questions--answers)
-- [Contributors ✨](#contributors-)
+###############################################################################
+# Copyright 2025, Revolutionary Technology
+# URL: http://www.configserver.shop
+# Email: sales@waytotheweb.shop
+###############################################################################
 
-<br />
+ConfigServer Security & Firewall
+################################
 
----
+This suite of scripts provides:
 
-<br />
+1. Astraightforwardd SPI iptables firewall script
+2. A daemon process that checks for Login Authentication
+3. A Control Panel configuration interface
+4. ... and much more!
 
-## Summary
+The reason we have developed this suite is that we have found over the years of
+providing server management services that many of the tools available for the
+task are either over-complex, not very friendly, or simply aren't as effective
+as they could or should be.
 
-ConfigServer Security & Firewall, also known as CSF, is a Stateful Packet Inspection (SPI) firewall and Login/Intrusion Detection and Security application for Linux servers which started back in 2005. CSF works as a front-end to iptables or nftables, configuring your server’s firewall rules to lock down public access to services while allowing only approved connections.
+This document contains:
 
-This provides better security for your server while giving you an advanced, easy-to-use interface for managing firewall settings. With CSF in place, you can safely permit activities such as logging in via FTP or SSH, checking email, and loading websites, while unauthorized access attempts are blocked.
+1. Introduction
 
-<br />
+2. csf Principles
 
-> [!NOTE] 
-> In August 2025, the original developer, Way to the Web Ltd, unfortunately discontinued development of ConfigServer Firewall. This repository has since became a fork of the original application, continuing its development by adding new features and providing ongoing bug fixes.
+3. lfd Principles
 
-<br />
+4. csf Command Line Options
 
----
+5. lfd Command Line Options
 
-<br />
+6. Login Tracking
 
-## ⚠️ Beware of Fake Websites & Scams ⚠️
+7. Script Email Alerts
 
-There are a few **fake websites** circulating that claim to sell a *"commercial"* version of **ConfigServer Security and Firewall (CSF)**.
+8. Process Tracking
 
-These are **not legitimate**.
+9. Directory Watching
 
-ConfigServer Security and Firewall is completely **open-source and free** — we will **never charge you** for the product.
+10. Advanced Allow/Deny Filters
 
-When visiting our official website, make sure you're using the `.dev` domain (TLD):
+11. Multiple Ethernet Devices
 
-- [https://configserver.dev](https://configserver.dev)
+12. Installation on a Generic Linux Server
 
-<br />
+13. A note about FTP Connection Issues
 
----
+14. Messenger Service (v1, v2 and v3)
 
-<br />
+15. Block Reporting
 
-## Features
+16. Port Flood Protection
 
-Interested in ConfigServer Security & Firewall? Check out a partial list of the included features below:
+17. External Pre- and Post- Scripts
 
-<br />
+18. lfd Clustering
 
-### Firewall & Network Security
+19. Port Knocking
 
-- Easy-to-use SPI firewall powered by iptables/nftables
-- Pre-configured for cPanel and DirectAdmin (standard ports open by default)
-- Auto-detects non-standard SSH ports during installation
-- Works with multiple network interfaces
-- Supports IPv6 via ip6tables
-- Block traffic on unused server IPs to reduce attack surface
-- Country-based access control (allow/deny by ISO Country Code)
-- Protection against:
-    - SYN floods
-    - Ping of Death
-    - Port scans
-    - Connection flooding (per IP/per port detection)
-- Permanent or temporary IP blocking (with TTL support)
-- Integration with blocklists like DShield and Spamhaus DROP
-- BOGON packet protection
+20. Connection Limit Protection
 
-<br />
+21. Port/IP address Redirection
 
-### Login & User Monitoring
+22. Integrated User Interface Feature
 
-- Login Failure Daemon (LFD): detects repeated login failures (brute force protection)
-- Monitors authentication for:
-    - SSH (OpenSSH)
-    - FTP (Pure-ftpd, vsftpd, Proftpd)
-    - Mail (Courier IMAP, Dovecot, Kerio, Exim SMTP AUTH, POP3/IMAP)
-    - Web (cPanel/WHM, Webmail, htpasswd-protected pages)
-    - ModSecurity (v1 & v2)
-    - Suhosin
-    - Custom services via regex and log file matching
-- POP3/IMAP login tracking (limit logins per hour)
-- Distributed attack detection (across multiple servers)
-- LFD clustering – share blocks/whitelists across a server group
-- Temporary IP allows (with TTL)
+23. IP Block Lists
 
-<br />
+24. Mitigating issues with syslog/rsyslog logs (RESTRICT_SYSLOG)
 
-### Alerts & Notifications
+25. Exim SMTP AUTH Restriction
 
-- SSH and su login notifications
-- Root access notifications (WHM)
-- Alerts for:
-    - High server load average
-    - Excessive email sending per hour (spamming detection)
-    - Suspicious processes running
-    - Abnormal file activity in /tmp and similar directories
-    - Excessive user processes or resource usage
-    - Account changes (password updates, shell changes, etc.)
+26. UI Skinning and Mobile View
 
-<br />
+27. CloudFlare
 
-### Intrusion Detection & Exploit Protection
+28. InterWorx
 
-- Intrusion Detection System (IDS) – monitors system/application binaries
-- Suspicious process and file reporting
-- Exploit checks
-- Directory and file integrity monitoring
-- ModSecurity log reporting
-- Messenger Service – optionally redirect blocked users to a custom page explaining why access is denied
+29. CentOS Web Panel (CWP)
 
-<br />
+1. Introduction
+###############
 
-### Management & Control
+ConfigServer Firewall (csf)
+===========================
 
-- Integrated UI for major control panels:
-    - [cPanel](https://cpanel.net/), [DirectAdmin](https://directadmin.com/), [InterWorx](https://interworx.com/), [CWP](https://control-webpanel.com/), [VestaCP](https://vestacp.com/), [CyberPanel](https://cyberpanel.net/), [Webmin](https://webmin.com/)
-- cPanel reseller access (per-reseller firewall controls: Allow, Deny, Unblock, Search)
-- Integrated with CloudFlare Firewall
-- Upgrade firewall directly from control panel or shell
-- Quick start mode for servers with large allow/deny lists
-- Easy Dynamic DNS support (auto-allow your changing home IP)
-- System statistics & graphs (CPU, load, memory, etc.)
-- ipset support for handling large IP lists efficiently
-- Integrated support for cse within the UI
+We have developed an SPI iptables firewall that is straight-forward, easy and
+flexible to configure and secure with extra checks to ensure smooth operation.
+
+csf can be used on any (supported - see the website) generic Linux OS.
+
+The csf installation includes preconfigured configurations and control panel
+UI's for cPanel, DirectAdmin and Webmin
+
+Directory structure:
+
+/etc/csf/ - configuration files
+/var/lib/csf/ - temporary data files
+/usr/local/csf/bin/ - scripts
+/usr/local/csf/lib/ - perl modules and static data
+/usr/local/csf/tpl/ - email alert templates
+
+Login Failure Daemon (lfd)
+==========================
+
+To complement the ConfigServer Firewall, we have developed a daemon process
+that runs all the time and periodically (every X seconds) scans the latest log
+file entries for login attempts against your server that continually fail
+within a short period of time. Such attempts are often called "Brute-force
+attacks" and the daemon process responds very quickly to such patterns and
+blocks offending IP's quickly. Other similar products run every x minutes via
+cron and as such often miss break-in attempts until after they've finished, our
+daemon eliminates such long waits and makes it much more effective at
+performing its task.
+
+There are an array of extensive checks that lfd can perform to help alert the
+server administrator of changes to the server, potential problems and possible
+compromises.
 
-<br />
+On cPanel servers, lfd is integrated into the WHM > Service Manager, which will
+restart lfd if it fails for any reason.
 
----
+Control Panel Interface
+=======================
 
-<br />
+To help with the ease and flexibility of the suite we have developed a
+front-end to both csf and lfd for cPanel, DirectAdmin and Webmin. From there
+you can modify the configuration files and stop, start and restart the
+applications and check their status. This makes configuring and managing the
+firewall very simple indeed.
 
-## Documentation
+There is, of course, a comprehensive Command Line Interface (CLI) for csf.
 
-This README only covers basic installation of CSF. In order to keep all information in one place, all other guides are located in our [official documentation](https://docs.configserver.dev). We have provided some useful links below.
+2. csf Principles
+#################
 
-<br />
+The idea with csf, as with most iptables firewall configurations, is to block
+everything and then allow through only those connections that you want. This is
+done in iptables by DROPPING all connections in and out of the server on all
+protocols. Then allow traffic in and out from existing connections. Then open
+ports up in and outgoing for both TCP and UDP individually.
 
-<div align="center">
+This way we can control exactly what traffic is allowed in and out of the
+server and helps protect the server from malicious attack.
 
-[![View Official Documentation](https://img.shields.io/badge/View_Official_Documentation-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://docs.configserver.dev)
+In particular it prevents unauthorised access to network daemons that we want
+to restrict access by IP address, and also should a service suffer a
+compromise, it can help prevent access to compromise networks daemons, a
+typical example being a hackers sshd daemon running on a random open port.
+Perhaps the greatest of reasons is to help mitigate the effects of suffering a
+root compromise where often they only way to take advantage of such a failure
+is to open a daemon for the hacker to access the server on. While this won't
+prevent root compromises, it can help slow them down enough for you to notice
+and react.
 
-</div>
+Another way that a port filtering firewall can help is when a user level
+compromise occurs and a hacker installs DOS tools to effect other servers. A
+firewall configured to block outgoing connections except on specific ports can
+help prevent DOS attacks from working and make it immediately apparent to you
+from the system logs.
 
-<br />
+csf has been designed to keep this configuration simple, but still flexible
+enough to give you options to suit your server environment. Often firewall
+scripts can become cumbersome of complex making it impossible to identify where
+problems lie and to easily fix them.
 
-### 📕 Main Chapters
+To take advantage of kernel logging of iptables dropped connections you should
+ensure that kernel logging daemon (klogd) is enabled. Typically, VPS servers
+have this disabled and you should check /etc/init.d/syslog and make sure that
+any klogd lines are not commented out. If you change the file, remember to
+restart syslog.
 
-Review the following chapters to learn more about setting up CSF and making use of its included features:
+3. lfd Principles
+#################
 
-<br />
+One of the best ways to protect the server from inbound attack against network
+daemons is to monitor their authentication logs. Invalid login attempts which
+happen in a short space of time from the same source can often mean someone is
+attempting to brute-force their way into the server, usually by guessing
+usernames and passwords and therefore generating authentication and login
+failures.
 
-| Chapter | Description | View Docs |
-| --- | --- | --- |
-| Enable Web Interface | How to enable and set up CSF web interface | [View](https://aetherinox.github.io/csf-firewall/install/webui/) |
-| Configuration | Configuring CSF for the first time | [View](https://aetherinox.github.io/csf-firewall/usage/configuration/) |
-| Enable IPSETs | Manage large blocklists without performance impacts | [View](https://aetherinox.github.io/csf-firewall/usage/ipset/) |
-| Blocklists | Deny access to abusive IPs with 3rd party blocklists | [View](https://aetherinox.github.io/csf-firewall/usage/blocklists/) |
-| GeoIP Blocks | Block access to geographical locations | [View](https://aetherinox.github.io/csf-firewall/usage/geoip/) |
-| Traefik Integration | CSF behind Traefik Reverse Proxy | [View](https://aetherinox.github.io/csf-firewall/install/traefik/) |
-| Authentik Integration | Secure CSF behind Authentik for authentication | [View](https://aetherinox.github.io/csf-firewall/install/authentik/) |
-| Uninstall | Uninstall CSF from your server | [View](https://aetherinox.github.io/csf-firewall/install/uninstall/) | 
+lfd can monitor the most commonly abused protocols, SSHD, POP3, IMAP, FTP and
+HTTP password protection. Unlike other applications, lfd is a daemon process
+that monitors logs continuously and so can react within seconds of detecting
+such attempts. It also monitors across protocols, so if attempts are made on
+different protocols in a short space of time, all those attempts will be
+counted against the threshold.
+
+Once the number of failed login attempts is reached, lfd immediately forks a
+sub-process and uses csf to block the offending IP address from both in and
+outgoing connections. Stopping the attack in its tracks in a quick and timely
+manner. Other applications that use cron job timings to run usually completely
+miss brute force attacks as they run usually every 5 minutes or by which time
+the attack could be over, or simply biding its time. In the meantime lfd will
+have block the offenders IP address.
+
+By running the block and alert email actions in a sub-process, the main daemon
+can continue monitoring the logs without delay.
+
+If you want to know when lfd blocks an IP address you can enable the email
+alert (which is on by default) and you should watch the log file in
+/var/log/lfd.log.
+
+4. csf Command Line Options
+###########################
+
+Before configuring and starting csf for the first time, it is a good idea to
+run the script /etc/csf/csftest.pl using:
+
+perl /etc/csf/csftest.pl
+
+This script will test whether the required iptables modules are functioning on
+the server. Don't worry if it cannot run all the features, so long as the
+script doesn't report any FATAL errors.
+
+You can view the csf command line options by using either:
+
+# man csf
+
+or
+
+# csf -h
+
+These options allow you to easily and quickly control and view csf. All the
+configuration files for csf are in /etc/csf and include:
+
+csf.conf - the main configuration file, it has helpful comments explaining
+what each option does
+csf.allow - a list of IP's and CIDR addresses that should always be allowed
+through the firewall
+csf.deny - a list of IP's and CIDR addresses that should never be allowed
+through the firewall
+csf.ignore - a list of IP's and CIDR addresses that lfd should ignore and
+not block if detected
+csf.*ignore - various ignore files that list files, users, IP's that lfd
+should ignore. See each file for their specific purpose and
+tax
+
+If you modify any of the files listed above, you will need to restart csf and
+then lfd to have them take effect. If you use the command line options to add
+or deny IP addresses, then csf automatically does this for you.
+
+Both csf.allow and csf.deny can have comments after the IP address listed. The
+comments must be on the same line as the IP address otherwise the IP rotation
+of csf.deny will remove them.
+
+If editing the csf.allow or csf.deny files directly, either from shell or the
+WHM UI, you should put a <space>#<space> between the IP address and the comment
+like this:
+
+11.22.33.44 # Added because I don't like them
+
+You can also include comments when using the csf -a or csf -d commands, but in
+those cases you must not use a # like this:
+
+csf -d 11.22.33.44 Added because I don't like them
+
+If you use the shell commands then each comment line will be timestamped. You
+will also find that if lfd blocks an IP address it will add a descriptive
+comment plus timestamp.
+
+If you don't want csf to rotate a particular IP in csf.deny if the line limit
+is reach you can do so by adding "do not delete" within the comment field,
+e.g.:
+
+11.22.33.44 # Added because I don't like them. do not delete
+
+Include statement in configuration files
+========================================
+
+You can use an Include statement in the following files that conform to the
+format of the originating file:
+
+/etc/csf/csf.allow
+/etc/csf/csf.blocklists
+/etc/csf/csf.cloudflare
+/etc/csf/csf.deny
+/etc/csf/csf.dirwatch
+/etc/csf/csf.dyndns
+/etc/csf/csf.fignore
+/etc/csf/csf.ignore
+/etc/csf/csf.logfiles
+/etc/csf/csf.logignore
+/etc/csf/csf.mignore
+/etc/csf/csf.pignore
+/etc/csf/csf.rblconf
+/etc/csf/csf.redirect
+/etc/csf/csf.rignore
+/etc/csf/csf.signore
+/etc/csf/csf.sips
+/etc/csf/csf.smtpauth
+/etc/csf/csf.suignore
+/etc/csf/csf.syslogs
+/etc/csf/csf.syslogusers
+/etc/csf/csf.uidignore
+
+You must specify the full path to the included file, e.g. in
+/etc/csf/csf.allow:
+
+Include /etc/csf/csf.alsoallow
+
+Do NOT put a comment after the Include filename as this will not work and will
+invalidate the Include line.
+
+Note: None of the csf commands for adding or removing entries from the
+originating file will be performed on Include files. They are treated as
+read-only.
+
+5. lfd Command Line Options
+###########################
+
+lfd does not have any command line options of its own but is controlled through
+init or systemd which stops and starts the daemon. It is configured using the
+/etc/csf/csf.conf file.
+
+The best way to see what lfd is up to is to take a look in /var/log/lfd.log
+where its activities are logged.
+
+The various email alert templates follow, care should be taken if you
+modify that file to maintain the correct format:
+
+/usr/local/csf/tpl/accounttracking.txt - for account tracking alert emails
+/usr/local/csf/tpl/alert.txt - for port blocking emails
+/usr/local/csf/tpl/connectiontracking.txt - for connection tracking emails
+/usr/local/csf/tpl/consolealert.txt - for console root login alert emails
+/usr/local/csf/tpl/cpanelalert.txt - for WHM/cPanel account access emails
+/usr/local/csf/tpl/exploitalert.txt - for system exploit alert emails
+/usr/local/csf/tpl/filealert.txt - for suspicious file alert emails
+/usr/local/csf/tpl/forkbombalert.txt - for fork bomb alert emails
+/usr/local/csf/tpl/integrityalert.txt - for system integrity alert emails
+/usr/local/csf/tpl/loadalert.txt - for high load average alert emails
+/usr/local/csf/tpl/logalert.txt - for log scanner report emails
+/usr/local/csf/tpl/logfloodalert.txt - for log file flooding alert emails
+/usr/local/csf/tpl/modsecipdbcheck.txt - for ModSecurity IP DB size alert emails
+/usr/local/csf/tpl/netblock.txt - for netblock alert emails
+/usr/local/csf/tpl/permblock.txt - for temporary to permanent block alert emails
+/usr/local/csf/tpl/portknocking.txt - for Port Knocking alert emails
+/usr/local/csf/tpl/portscan.txt - for port scan tracking alert emails
+/usr/local/csf/tpl/processtracking.txt - for process tracking alert emails
+/usr/local/csf/tpl/queuealert.txt - for email queue alert emails
+/usr/local/csf/tpl/relayalert.txt - for email relay alert emails
+/usr/local/csf/tpl/resalert.txt - for process resource alert emails
+/usr/local/csf/tpl/scriptalert.txt - for script alert emails
+/usr/local/csf/tpl/sshalert.txt - for SSH login emails
+/usr/local/csf/tpl/sualert.txt - for SU alert emails
+/usr/local/csf/tpl/tracking.txt - for POP3/IMAP blocking emails
+/usr/local/csf/tpl/uialert.txt - for UI alert emails
+/usr/local/csf/tpl/usertracking.txt - for user process tracking alert emails
+/usr/local/csf/tpl/watchalert.txt - for watched file and directory change alert emails
+/usr/local/csf/tpl/webminalert.txt - for Webmin login emails
+
+6. Login Tracking
+#################
+
+Login tracking is an extension of lfd, it keeps track of POP3 and IMAP logins
+and limits them to X connections per hour per account per IP address. It uses
+iptables to block offenders to the appropriate protocol port only and flushes
+them every hour and starts counting logins afresh. All of these blocks are
+temporary and can be cleared manually by restarting csf.
+
+There are two settings, one of POP3 and one for IMAP logins. It's generally
+not a good idea to track IMAP logins as many clients login each time to perform
+a protocol transaction (there's no need for them to repeatedly login, but you
+can't avoid bad client programming!). So, if you do have a need to have some
+limit to IMAP logins, it is probably best to set the login limit quite high.
+
+If you want to know when lfd temporarily blocks an IP address you can enable
+the email tracking alerts option (which is on by default)
+
+You can also add your own login failure tracking using regular expression
+matching. Please read /usr/local/csf/bin/regex.custom.pm for more information
+
+Important Note: To enable successful SSHD login tracking you should ensure that
+UseDNS in /etc/ssh/sshd_config is disabled by using:
+
+UseDNS no
+
+and that sshd has then been restarted.
+
+7. Script Email Alerts
+######################
+
+(cPanel installations of csf only)
+
+lfd can scan for emails being sent through exim from scripts on the server.
+
+To use this feature you must add an extended email logging line to WHM >
+Exim Configuration Manager > Advanced Editor. Search for log_selector and
+ensure that the following are included:
+
+log_selector = +arguments +subject +received_recipients
+
+This setting will then send an alert email if more than LF_SCRIPT_LIMIT lines
+appear with the same cwd= path in them within an hour. This can be useful in
+identifying spamming scripts on a server, especially PHP scripts running
+under the nobody account. The email that is sent includes the exim log lines
+and also attempts to find scripts that send email in the path that may be the
+culprit.
+
+This option uses the /usr/local/csf/tpl/scriptalert text file for alert emails.
+
+If you enable the option LF_SCRIPT_ALERT then lfd will disable the path using
+chattr +i and chmod 000 so that the user cannot re-enable it. The alert email
+also then includes the commands needed to re-enable the offending path.
 
-<br />
+Any false-positives can be added to /etc/csf/csf.signore and lfd will then
+ignore those listed scripts.
 
-### 📗 Cheatsheets
+8. Process Tracking
+###################
 
-These are quick-guides which explain very specific features in detail.
+This option enables tracking of user and nobody processes and examines them for
+suspicious executables or open network ports. Its purpose is to identify
+potential exploit processes that are running on the server, even if they are
+obfuscated to appear as system services. If a suspicious process is found an
+alert email is sent with relevant information.
 
-<br />
+It is then the responsibility of the recipient to investigate the process
+further as the script takes no further action. Processes (PIDs) are only
+reported once unless lfd is restarted.
 
-| Chapter | Description | View Docs |
-| --- | --- | --- |
-| Folder Structure | Explains every file and folder within CSF and its purpose | [View](https://aetherinox.github.io/csf-firewall/usage/cheatsheet/structure/) |
-| Commands | Detailed overview of the commands that come with CSF | [View](https://aetherinox.github.io/csf-firewall/usage/cheatsheet/commands/) |
-| Sample Configs | Default and example config files / templates for CSF | [View](https://aetherinox.github.io/csf-firewall/usage/cheatsheet/conf/) |
+There is an ignore file /etc/csf/csf.pignore which can be used to whitelist
+either usernames or full paths to binaries. Care should be taken with ignoring
+users or files so that you don't force false-negatives.
 
-<br />
+You must use the following format:
 
----
+exe:/full/path/to/file
+user:username
+cmd:command line
 
-<br />
+The command line as reported in /proc has the trailing null character removed
+and all other occurrences replaced with a space. So, the line you specify in
+the file should have space separators for the command line arguments, not null
+characters.
 
-## Install
+It is strongly recommended that you use command line ignores very carefully
+as any process can change what is reported to the OS.
 
-This section will explain how to install ConfigServer Firewall in very simple terms, without a lot of extra detail. We also provide a full and detailed [Installation Guide](https://aetherinox.github.io/csf-firewall/install/dependencies/) within our official documentation. These docs go into much more detail than our README. However, if you're looking for a quick setup, read below:
+Don't list the paths to perl or php as this will prevent detection of
+suspicious web scripts.
 
-<br />
+For more information on the difference between executable and command line, you
+should read and understand how the linux /proc pseudo-filesystem works:
 
-### Requirements
+man proc
+man lsof
 
-Installing CSF on your server requires the following:
+It is beyond the scope of this application to explain how to investigate
+processes in the linux /proc architecture.
 
-- Any `RHEL` or `Debian` based Linux distro
-- Root access or user account with `sudo` privileges.
-- `Perl` installed on your server.
+The email alerts are sent using the processtracking.txt email template.
 
-<br />
+It should be noted that this feature will not pickup a root compromise as root
+processes are ignored - you should use established IDS tools for such security
+considerations.
 
-### Install
+*** NOTE *** You _will_ get false-positives with this particular feature. The
+reason for the feature is to bring to your attention processes that have either
+been running for a long time under a user account, or that have ports open
+outside of your server. You should satisfy yourself that they are indeed false-
+positives before either ignoring them or trapping them in the csf.pignore file.
 
-Use these instructions if you wish to manually install CSF on your server. 
+We've done our best to minimise false-positives, but there's a balance between
+being cautious and the sensitivity needed to pick up exploits.
 
-<br />
+The script itself cannot distinguish between malicious intent and intended
+script function - that's your job as the server administrator ;-)
 
-#### Step 1: Dependencies
+The setting PT_SKIP_HTTP does reduce the number of false-positives by not
+checking scripts running directly or through CGI in Apache. However, disabling
+this setting will make a more thorough job of detecting active exploits of all
+varieties.
 
-To install the latest version of CSF manually, run the following commands:
+Another alternative might be to disable PT_SKIP_HTTP and increase PT_LIMIT to
+avoid picking up web scripts, however this means that real exploits will run
+for longer before they're picked up.
 
-<br />
+You can, of course, turn the feature off too - if you really want to.
 
-  - For **Debian/Ubuntu**:
+9. Directory Watching
+#####################
 
-    ```shell
-    sudo apt-get update && sudo apt-get install -y \
-      ipset \
-      libcrypt-ssleay-perl \
-      libio-socket-inet6-perl \
-      libio-socket-ssl-perl \
-      libnet-libidn-perl \
-      libsocket6-perl \
-      perl \
-      wget
-    ```
+Directory Watching enables lfd to check /tmp and /dev/shm and other pertinent
+directories for suspicious files, i.e. script exploits.
 
-<br />
+If a suspicious file is found an email alert is sent using the template
+filealert.txt.
 
-  - For **CentOS/RHEL**:
+NOTE: Only one alert per file is sent until lfd is restarted, so if you remove
+a suspicious file, remember to restart lfd
 
-    ```shell
-    sudo yum makecache && sudo yum install -y \
-      ipset \
-      perl \
-      perl-IO-Socket-INET6 \
-      perl-IO-Socket-SSL.noarch \
-      perl-libwww-perl \
-      perl-Net-LibIDN2 \
-      perl-Net-SSLeay \
-      perl-Socket6 \
-      wget
-    ```
+To remove any suspicious files found during directory watching, enable
+corresponding setting the suspicious files will be appended to a tarball in
+/var/lib/csf/suspicious.tar and deleted from their original location. Symlinks
+are simply removed.
 
-<br />
-<br />
-<br />
+If you want to extract the tarball to your current location, use:
 
-#### Step 2: Download
+tar -xpf /var/lib/csf/suspicious.tar
 
-To download and install CSF, you have two options. Both options give you the latest version of our CSF archive. 
+This will preserver the path and permissions of the original file.
 
-1. [Download .zip using wget or curl](#download-direct)
-2. [Download .zip using get.sh script](#download-getsh)
+Any false-positives can be added to /etc/csf/csf.fignore and lfd will then
+ignore those listed files and directories.
 
-<br />
+Within csf.fignore is a list of files that lfd directory watching will ignore.
+You must specify the full path to the file
 
-##### Download Direct
+You can also use perl regular expression pattern matching, for example:
+/tmp/clamav.*
+/tmp/.*\.wrk
 
-To download the latest CSF release, run one of the commands:
+Remember that you will need to escape special characters (precede them with a
+backslash) such as \. \?
 
-```shell
-# Using wget
-wget https://download.configserver.dev/csf.zip
+Pattern matching will only occur with strings containing an asterisk (*),
+otherwise full file path matching will be applied
 
-# Using curl
-curl -O https://download.configserver.dev/csf.zip
-```
+You can also add entries to ignore files owner by a particular user by
+preceding it with user:, for example:
+user:bob
 
-<br />
+Note: files owned by root are ignored
 
-##### Download Get.sh
+For information on perl regular expressions:
+http://www.perl.com/doc/manual/html/pod/perlre.html
 
-To download the latest version of CSF using our [get.sh](https://get.configserver.dev) script, run one of the commands below. This will simply give you the zip file in the folder you run the command from.
+The second aspect of Directory Watching is enabled with LF_DIRWATCH_FILE. This
+option allows you to have lfd watch a particular file or directory for changes
+and should they change and email alert using watchalert.txt is sent. It uses a
+simple md5sum match from the output of "ls -laAR" on the entry and so will
+traverse directories if specified.
 
-```shell
-# Using wget
-bash <(wget -qO - https://get.configserver.dev)
+10. Advanced Allow/Deny Filters
+###############################
 
-# Using curl
-bash <(curl -sL https://get.configserver.dev)
-```
+In /etc/csf/csf.allow and /etc/csf/csf.deny you can add more complex port and
+ip filters using the following format (you must specify a port AND an IP
+address):
 
-<br />
-<br />
-<br />
+tcp/udp|in/out|s/d=port|s/d=ip|u=uid
 
-The CSF archive should be on your server; extract it to a subfolder called `./csf`:
+Broken down:
 
-```shell
-# .zip filename
-unzip -oq "csf.zip" -d "csf"
+tcp/udp : EITHER tcp OR udp OR icmp protocol
+in/out : EITHER incoming OR outgoing connections
+s/d=port : EITHER source OR destination port number (or ICMP type)
+(use a _ for a port range, e.g. 2000_3000)
+(use a , for a multiport list of up to 15 ports, e.g. 22,80,443)
+s/d=ip : EITHER source OR destination IP address
+u/g=UID : EITHER UID or GID of source packet, implies outgoing connections,
+s/d=IP value is ignored
 
-# .tgz filename
-tar -xzf "csf.tgz" -C "csf"
-```
+Note: ICMP filtering uses the "port" for s/d=port to set the ICMP type.
+Whether you use s or d is not relevant as either simply uses the iptables
+--icmp-type option. Use "iptables -p icmp -h" for a list of valid ICMP types.
+Only one type per filter is supported
 
-<br />
-<br />
-<br />
+Examples:
 
-#### Step 3: Run Pre-install Tests
+# TCP connections inbound to port 3306 from IP 11.22.33.44
+tcp|in|d=3306|s=11.22.33.44
 
-Before enabling and configuring CSF, it is crucial to test whether it is compatible with your server. Run the following command to initiate the test. 
+# TCP connections outbound to port 22 on IP 11.22.33.44
+tcp|out|d=22|d=11.22.33.44
 
-If the test completes successfully, you will see `RESULT: csf should function on this server`. If there are any problems, the test will provide information on how to resolve them.
+Note| If omitted, the default protocol is set to "tcp", the default connection
+direction is set to "in", so|
 
-```shell
-sudo perl csf/csftest.pl
-```
+# TCP connections inbound to port 22 from IP 44.33.22.11
+d=22|s=44.33.22.11
 
-<br />
-<br />
-<br />
+# TCP connections outbound to port 80 from UID 99
+tcp|out|d=80||u=99
 
-#### Step 4: Install
+# ICMP connections inbound for type ping from 44.33.22.11
+icmp|in|d=ping|s=44.33.22.11
 
-After completing [Step 3: Run Pre-install Tests](#step-3-run-pre-install-tests), Navigate to the extracted directory:
+# TCP connections inbound to port 22 from Dynamic DNS address
+# www.configserver.com (for use in csf.dyndns only)
+tcp|in|d=22|s=www.configserver.com
 
-```shell
-cd csf
-```
+# TCP connections inbound to port 22,80,443 from IP 44.33.22.11
+d=22,80,443|s=44.33.22.11
 
-<br />
+11. Multiple Ethernet Devices
+#############################
 
-Run the installation script. After installation, you must [Disable Testing Mode](#step-5-disable-testing-mode).
+If you have multiple ethernet NICs that you want to apply all rules to, then
+you can set ETH_DEVICE to the interface name immediately followed by a plus
+sign. For example, eth+ will apply all iptables rules to eth0, eth1, etc.
 
-```shell
-sudo sh install.sh
-```
+That said, if you leave ETH_DEVICE blank all rules will be applied to all
+ethernet devices equally.
 
-<br />
-<br />
-<br />
+12. Installation on a Generic Linux Server
+##########################################
 
-#### Step 5: Disable Testing Mode
+csf+lfd can be configured to run on a generic Linux server. There are some
+changes to the features available:
 
-In order for the LFD service to be started, you must disable `TESTING` mode. Open your csf config file at `/etc/csf/csf.conf` and change `TESTING = "1"` to `0`.
+1. The default port range is for a typical non-cPanel web server and may need
+altering to suit the servers environment
 
-```shell
-TESTING = "0"
-```
+2. The Process Tracking ignore file may need expanding in /etc/csf/csf.pignore
+to suit the server environment
 
-<br />
-<br />
-<br />
+3. A standard Webmin Module to configure csf is included - see the install.txt
+for more information
 
-#### Step 6: Enable and Start Services
+The codebase is the same for a all installations, the csf.conf file simply has
+the cPanel specific options removed and the GENERIC option added
 
-After doing all of the above, confirm that CSF and LFD are now running on your server. First, we will enable CSF with the following command:
+13. A note about FTP Connection Issues
+######################################
 
-```shell
-sudo csf --enable
-```
+It is important when using an SPI firewall to ensure FTP client applications
+are configured to use Passive (PASV) mode connections to the server.
 
-<br />
+On servers running Monolithic kernels (e.g. VPS Virtuozzo/OpenVZ and custom
+built kernels) ip_conntrack and ip_conntrack_ftp iptables kernel modules may
+not be available or fully functional. If this happens, FTP passive mode (PASV)
+won't work. In such circumstances you will have to open a hole in your firewall
+and configure the FTP server to use that same hole.
 
-Then start the service:
+For example, with pure-ftpd you could add the port range 30000:35000 to TCP_IN
+and add the following line to /etc/pure-ftpd.conf and then restart pure-ftpd:
+PassivePortRange 30000 35000
 
-```shell
-sudo systemctl start csf
-sudo systemctl start lfd
-sudo csf -ra
-```
+For example, with proftpd you could add the port range 30000:35000 to TCP_IN
+and add the following line to /etc/proftpd.conf and then restart proftpd:
+PassivePorts 30000 35000
 
-<br />
+FTP over SSL/TLS will usually fail when using an SPI firewall. This is because
+of the way the FTP protocol established a connection between client and server.
+iptables fails to establish a related connection when using FTP over SSL
+because the FTP control connection is encrypted and so cannot track the
+relationship between the connection and the allocation of an ephemeral port.
 
-Confirm that the CSF service is up and running:
+If you need to use FTP over SSL, you will have to open up a passive port block
+in both csf and your FTP server configuration (see above).
 
-```shell
-sudo systemctl status csf
-```
+Perversely, this makes your firewall less secure, while trying to make FTP
+connections more secure.
 
-<br />
+14. Messenger Service
+#####################
 
-You should see:
+This feature allows the display of a message to a blocked connecting IP address
+to inform the user that they are blocked in the firewall. This can help when
+users get themselves blocked, e.g. due to multiple login failures. The service
+is provided by several daemons running on ports providing HTTPS, HTML or TEXT
+message.
 
-```shell
-● csf.service - ConfigServer Security & Firewall - csf
-    Loaded: loaded (/usr/lib/systemd/system/csf.service; enabled; preset: enabled)
-    Active: active (exited) since Sun 2025-09-21 01:35:45 UTC; 4s ago
-    Process: 449564 ExecStart=/usr/sbin/csf --initup (code=exited, status=0/SUCCESS)
-  Main PID: 449564 (code=exited, status=0/SUCCESS)
-        CPU: 621ms
-```
+This services uses the iptables nat table and the associated PREROUTING chain.
+The ipt_REDIRECT module is used to redirect the incoming port to the relevant
+messenger service server port.
 
-<br />
+Temporary and/or permanent (csf.deny) IP addresses can be serviced by this
+feature.
 
-Now check the LFD service for the same status:
+It does NOT include redirection of any GLOBAL or BLOCK deny lists.
 
-```shell
-sudo systemctl status lfd
-```
+It does require the IO::Socket::INET perl module.
 
-<br />
+It does NOT work on servers that do not have the iptables module ipt_REDIRECT
+loaded. Typically, this will be with Monolithic kernels. VPS server admins
+should check with their VPS host provider that the iptables module is included.
 
-You should see:
+If you change any of the files in /etc/csf/messenger/ you must restart lfd as
+they are all cached in memory.
 
-```shell
-● lfd.service - ConfigServer Security & Firewall - lfd
-    Loaded: loaded (/usr/lib/systemd/system/lfd.service; enabled; preset: enabled)
-    Active: active (running) since Sun 2025-09-21 01:44:00 UTC; 53min ago
-    Process: 335736 ExecStart=/usr/sbin/lfd (code=exited, status=0/SUCCESS)
-  Main PID: 335770 (lfd - sleeping)
-      Tasks: 1 (limit: 4546)
-    Memory: 39.2M (peak: 63.3M)
-        CPU: 15.090s
-    CGroup: /system.slice/lfd.service
-            └─335770 "lfd - sleeping"
-```
+Use of this feature can be controlled by the Country Code options:
+CC_MESSENGER_ALLOW = ""
+CC_MESSENGER_DENY = ""
+See /etc/csf/csf.conf for an explanation of those options.
 
-<br />
+Messenger User
+==============
 
-At this point, CSF and LFD should be up and running, with minimal configuration. We highly recommend going to our official documentation for a more in-depth tutorial on how to install and configure CSF. These docs are available in our [Install Chapter](https://aetherinox.github.io/csf-firewall/install/dependencies/).
+You should create a unique user that the messenger services will run under.
+This user should be disabled and have no shell access, but should have a home
+directory.
 
-<br />
+For example, you can create such an account (in this example called "csf") from
+the root shell using:
 
----
+useradd csf -s /bin/false
 
-<br />
+TEXT Messenger Server
+=====================
 
-## IP Sets / Blocklist
+The TEXT message that is displayed is provided by the file:
 
-CSF supports the use of blocklists to help protect your server from malicious IP addresses and unwanted network traffic. Blocklists are essentially collections of IPs or networks that are known to be associated with spammers, hackers, botnets, or other abusive behavior. When CSF is configured to use blocklists, it can automatically deny or restrict connections from these IPs, reducing the risk of compromise, brute-force attacks, and other forms of network abuse. By proactively filtering traffic, blocklists help maintain server security and improve overall system reliability.
+/etc/csf/messenger/index.text
 
-Blocklists can come from a variety of third-party vendors, each maintaining their own lists based on threat intelligence and community reporting. Examples of well-known blocklist providers include Spamhaus, DShield, TOR Exit Node lists, BOGON networks, Project Honey Pot, and MaxMind’s anonymous proxies, among others. These lists are continuously updated and can be integrated into CSF to provide real-time protection against emerging threats.
+This file should only contain text. The TEXT server providing this file simply
+sends the contents to the connecting port and no protocol exchange takes place.
+this means that it may not be suitable for use with protocols such as POP3.
 
-In addition to third-party lists, CSF offers its own official blocklist and IPSET service, maintained in the Official CSF Repository
-. Users can choose to use the CSF official blocklist alone or combine it with other vendors’ lists for more comprehensive coverage. Using multiple blocklists in conjunction ensures a layered defense, helping administrators mitigate attacks and maintain control over who can access their server while minimizing false positives.
+The server has a built-in function that will replace the text [IPADDRESS] in
+index.text with the IP address that is blocked by the firewall. This will help
+the blocked user know what their blocked IP address is. You can also use the
+text [HOSTAME] which will be replaced by the servers FQDN hostname.
 
-By leveraging blocklists, CSF empowers users to proactively defend their infrastructure, reduce malicious traffic, and maintain a more secure hosting environment without manual monitoring of each incoming IP.
+The TEXT server does not support SSL connections, so redirecting port 995 will
+not work.
 
-<br />
+The TEXT server port should not be added to the TCP_IN list.
 
-### Official Blocklists
+There is a maximum of 15 port allowed in MESSENGER_TEXT_IN.
 
-CSF hosts our own set of blocklists which are are automatically updated every `12 hours`. You may add these sets to your ConfigServer Firewall `/etc/csf/csf.blocklists` with the following new lines:
+HTML and HTTPS Messenger v1 Server
+==================================
 
-```
-CSF_MASTER|43200|400000|https://raw.githubusercontent.com/Aetherinox/csf-firewall/main/blocklists/master.ipset
-CSF_HIGHRISK|43200|0|https://raw.githubusercontent.com/Aetherinox/csf-firewall/main/blocklists/highrisk.ipset
-```
+The HTML and HTTPS message that is displayed is provided by the file:
 
-<br />
-<br />
+/etc/csf/messenger/index.html
+/etc/csf/messenger/index.recaptcha.html (if using the RECAPTCHA_* feature)
 
-#### Risk Assessments
+The HTML server providing this page is very rudimentary but will accept the use
+of linked images that are stored in the /etc/csf/messenger/ directory. The
+images must be of either jpg, gif or png format. These images are loaded into
+memory so you should keep the number and size to a minimum. No other linked
+resource files are supported (e.g. .css, .js).
 
-The lists in this README use `⚝` and `★` icons to indicate risk levels. More stars mean higher risk. Lists marked as **High** or **Critical** should be added to your CSF blocklist to secure your server. Lower-risk lists are optional and can be added at your discretion.
+It is recommeneded to to use inline images (source embedding) to improve page
+load speed and reduce lfd overheads.
 
-Our automated CI generates this risk assessment each day.
+As the HTML server requires interaction with the client, there is a timer on
+the connection to prevent port hogging.
 
-<br />
+The server has a built-in function that will replace the text [IPADDRESS] in
+index.html with the IP address that is blocked by the firewall. This will help
+the blocked user know what their blocked IP address is. You can also use the
+text [HOSTAME] which will be replaced by the servers FQDN hostname.
 
-| Rating      | Risk            | Description                                      |
-| ----------- | --------------- | ------------------------------------------------ |
-| `⚝⚝⚝⚝⚝`   | No Risk         | IPs pose no real threat, but possibly suspected  |
-| `★⚝⚝⚝⚝`   | Low Risk        | IPs pose minimal threat                          |
-| `★★⚝⚝⚝`   | Moderate Risk   | IPs may cause issues; monitor carefully          |
-| `★★★⚝⚝`   | Elevated Risk   | IPs are risky; consider blocking                 |
-| `★★★★⚝`   | High Risk       | IPs are dangerous; likely to cause harm          |
-| `★★★★★`   | Critical Risk   | IPs are highly dangerous; block immediately      |
+The HTTPS service obtains the necessary certificates from MESSENGER_HTTPS_CONF.
 
-<br />
-<br />
+The HTML and HTTPS server ports should not be added to the TCP_IN list.
 
-#### Main Lists
+There is a maximum of 15 ports allowed in MESSENGER_HTML_IN and
+MESSENGER_HTTPS_IN.
 
-These are the primary IPSETs that most people will be interested in. They contain a large number of IP addresses that have been reported recently for abusive behavior. These statistics are gathered from multiple sources, such as [AbuseIPDB](https://abuseipdb.com/) and [IPThreat](https://ipthreat.net/). IPs on this list have a 100% confidence level, meaning you should encounter no false positives from any of the IPs included.  
+HTML and HTTPS Messenger v2 Server
+==================================
 
-IP addresses in these lists have been flagged for engaging in activities such as:
+This service is only available to cPanel servers running Apache. It utilises
+the existing Apache service to provide the message as well as RECAPTCHA
+unblocking. It is enabled through the MESSENGERV2 option.
 
-- SSH Bruteforcing
-- Port Scanning
-- DDoS Attacks
-- IoT Targeting
-- Phishing
+The server must be running Apache v2.4 and using cPanel's EasyApache v4.
 
-<br />
+HTML and HTTPS Messenger v3 Server
+==================================
 
-For most users, the blocklists `master.ipset` and `highrisk.ipset` are all you need. They contain a massive collection of IP addresses, all with a 100% confidence level, meaning you should encounter none or minimal false positives.
+This service is available to servers running Apache or Litespeed/Openlitespeed.
+It utilises the existing web server service to provide the message as well as
+RECAPTCHA unblocking. It is enabled through the MESSENGERV3 option.
 
-<br />
+The web server configuration is created in /var/lib/csf/csf.conf using the
+following templates in /usr/local/csf/tpl/:
 
-| Set Name | Description | Severity | View |
-| --- | --- | --- | --- |
-| `master.ipset` | <sub>Abusive IP addresses which have been reported for port scanning and SSH brute-forcing. HIGHLY recommended. <br> <sub><sup>Includes [AbuseIPDB](https://www.abuseipdb.com/), [IPThreat](https://ipthreat.net/), [CinsScore](https://cinsscore.com), [GreensNow](https://blocklist.greensnow.co/greensnow.txt)</sup></sub> | ★★★★★ | [view](https://blocklist.configserver.dev/master.ipset) |
-| `highrisk.ipset` | <sub>IPs with highest risk to your network and have a possibility that the activity which comes from them are going to be fraudulent.</sub> | ★★★★★ | [view](https://blocklist.configserver.dev/highrisk.ipset) |
+apache.main.txt
+apache.http.txt
+apache.https.txt
 
-<br />
-<br />
+litespeed.main.txt
+litespeed.http.txt
+litespeed.https.txt
 
-#### Privacy Lists
+*.main.txt can contain any web server directives required for the service to
+function.
+*.http.txt contains the configuration to offer the HTTP service
+*.https.txt contains the configuration to offer the HTTPS service. In this file
+the virtualhost container is created for each domain served with a certificate
+on the server.
 
-These blocklists help you control which third-party services can access your server, allowing you to block bad actors or unwanted service providers.
+These templates are not overwritten during a csf upgrade.
 
-<br />
+PHP is needed to display the MESSENGER web files (see following). This is
+controlled by the MESSENGERV3PHPHANDLER setting.
 
-| Set                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Severity    | View                                                                         |
-|-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|------------------------------------------------------------------------------|
-| `privacy_general.ipset`             | Servers which scan ports for data collection and research purposes. <br> <sub><sup>List includes [Censys](https://censys.io), [Shodan](https://shodan.io/), [Project25499](https://blogproject25499.wordpress.com/), [InternetArchive](https://archive.org/), [Cyber Resilience](https://cyberresilience.io), [Internet Measurement](https://internet-measurement.com), [probe.onyphe.net](https://onyphe.net), [Security Trails](https://securitytrails.com) | ★★★★⚝     | [view](https://blocklist.configserver.dev/privacy_general.ipset)</sup></sub> |
-| `privacy_ahrefs.ipset`              | Ahrefs SEO and services                                                                                                                                                                                                                                                                                                                                                                                                                                       | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_ahrefs.ipset)              |
-| `privacy_amazon_aws.ipset`          | Amazon AWS                                                                                                                                                                                                                                                                                                                                                                                                                                                    | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_amazon_aws.ipset)          |
-| `privacy_amazon_ec2.ipset`          | Amazon EC2                                                                                                                                                                                                                                                                                                                                                                                                                                                    | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_amazon_ec2.ipset)          |
-| `privacy_applebot.ipset`            | Apple Bots                                                                                                                                                                                                                                                                                                                                                                                                                                                    | ★★★⚝⚝     | [view](https://blocklist.configserver.dev/privacy_applebot.ipset)            |
-| `privacy_bing.ipset`                | Microsoft Bind and Bing Crawlers / Bots                                                                                                                                                                                                                                                                                                                                                                                                                       | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_bing.ipset)                |
-| `privacy_bunnycdn.ipset`            | Bunny CDN                                                                                                                                                                                                                                                                                                                                                                                                                                                     | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_bunnycdn.ipset)            |
-| `privacy_cloudflarecdn.ipset`       | Cloudflare CDN                                                                                                                                                                                                                                                                                                                                                                                                                                                | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_cloudflarecdn.ipset)       |
-| `privacy_cloudfront.ipset`          | Cloudfront DNS                                                                                                                                                                                                                                                                                                                                                                                                                                                | ★⚝⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_cloudfront.ipset)          |
-| `privacy_duckduckgo.ipset`          | DuckDuckGo Web Crawlers / Bots                                                                                                                                                                                                                                                                                                                                                                                                                                | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_duckduckgo.ipset)          |
-| `privacy_facebook.ipset`            | Facebook Bots & Trackers                                                                                                                                                                                                                                                                                                                                                                                                                                      | ★★★⚝⚝     | [view](https://blocklist.configserver.dev/privacy_facebook.ipset)            |
-| `privacy_fastly.ipset`              | Fastly CDN                                                                                                                                                                                                                                                                                                                                                                                                                                                    | ★⚝⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_fastly.ipset)              |
-| `privacy_google.ipset`              | Google Crawlers                                                                                                                                                                                                                                                                                                                                                                                                                                               | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_google.ipset)              |
-| `privacy_pingdom.ipset`             | Pingdom Monitoring Service                                                                                                                                                                                                                                                                                                                                                                                                                                    | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_pingdom.ipset)             |
-| `privacy_rssapi.ipset`              | RSS API Reader                                                                                                                                                                                                                                                                                                                                                                                                                                                | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_rssapi.ipset)              |
-| `privacy_stripe_api.ipset`          | Stripe Payment Gateway API                                                                                                                                                                                                                                                                                                                                                                                                                                    | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_stripe_api.ipset)          |
-| `privacy_stripe_armada_gator.ipset` | Stripe Armada Gator                                                                                                                                                                                                                                                                                                                                                                                                                                           | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_stripe_armada_gator.ipset) |
-| `privacy_stripe_webhooks.ipset`     | Stripe Webhook Service                                                                                                                                                                                                                                                                                                                                                                                                                                        | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_stripe_webhooks.ipset)     |
-| `privacy_telegram.ipset`            | Telegram Trackers and Crawlers                                                                                                                                                                                                                                                                                                                                                                                                                                | ★★★⚝⚝     | [view](https://blocklist.configserver.dev/privacy_telegram.ipset)            |
-| `privacy_uptimerobot.ipset`         | Uptime Robot Monitoring Service                                                                                                                                                                                                                                                                                                                                                                                                                               | ★⚝⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_uptimerobot.ipset)         |
-| `privacy_webpagetest.ipset`         | Webpage Test Services                                                                                                                                                                                                                                                                                                                                                                                                                                         | ★★⚝⚝⚝     | [view](https://blocklist.configserver.dev/privacy_webpagetest.ipset)         |
+If left empty, the MESSENGER service will try to configure this. If this does
+not work, this should be set as an "Include /path/to/csf_php.conf" or similar
+file which must contain appropriate web server configuration to allow PHP
+scripts to run under the MESSENGER_USER account. This line will be included
+within each MESSENGER VirtualHost container. This will replace the
+[MESSENGERV3PHPHANDLER] line from the csf webserver template files.
 
-<br />
-<br />
+Messenger v2 and v3
+===================
 
-#### Spam Lists
+For the service to work, the Messenger User MUST have a specific directory
+structure. This will be created by the script if it does not exist so long as
+the user has been created with a home directory. The structure needs to mimic
+the standard web server setup, e.g. using "csf" as the user:
 
-These blocklists help prevent known spam sources from accessing your server. They include IPs identified by services like Spamhaus as well as spammers targeting forums and other online platforms.
+/home/csf/ (Owner csf:csf, Permissions 711)
+/home/csf/public_html/ (Owner csf:nobody, Permissions 711)
 
-<br />
+lfd will populate this structure with the following files:
 
-| Set                   | Description                                                | Severity   | View                                                           |
-|-----------------------|------------------------------------------------------------|------------|----------------------------------------------------------------|
-| `spam_forums.ipset`   | <sub>List of known forum / blog spammers and bots</sub>    | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/spam_forums.ipset)   |
-| `spam_spamhaus.ipset` | <sub>Bad actor IP addresses registered with Spamhaus</sub> | ★★★★⚝    | [view](https://blocklist.configserver.dev/spam_spamhaus.ipset) |
+/home/csf/public_html/.htaccess
+/home/csf/public_html/index.php
 
+If RECAPTCHA_* is enabled these files will be created if they do not already
+exist:
 
-<br />
-<br />
+/home/csf/recaptcha.php
+/home/csf/public_html/index.php
+/home/csf/en.php
 
-#### Internet Service Providers
+The HTML and HTTPS index file is created from (respectively):
+/etc/csf/messenger/index.php
+/etc/csf/messenger/index.recaptcha.php
+/etc/csf/messenger/en.php
 
-These blocklists allow you to filter traffic based on Internet Service Providers (ISPs). They can be used to block or restrict access from specific networks or providers.
+You should NOT modify the templates in /etc/csf/messenger/ as they will be
+overwritten when csf upgrades. Instead modify the files within /home/csf/.
 
-| Set                                          | Description                           | Severity   | View                                                                                  |
-|----------------------------------------------|---------------------------------------|------------|---------------------------------------------------------------------------------------|
-| `isp_aol.ipset`                              | AOL Internet Service Provider IPs     | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_aol.ipset)                              |
-| `isp_att.ipset`                              | AT&T Internet Service Provider IPs    | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_att.ipset)                              |
-| `isp_cablevision.ipset`                      | Cablevision / Optimum ISP IPs         | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_cablevision.ipset)                      |
-| `isp_charter_spectrum_timewarnercable.ipset` | Charter/Spectrum/TWC ISP IPs          | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_charter_spectrum_timewarnercable.ipset) |
-| `isp_comcast.ipset`                          | Comcast / Xfinity ISP IPs             | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_comcast.ipset)                          |
-| `isp_cox_communications.ipset`               | Cox Communications ISP IPs            | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_cox_communications.ipset)               |
-| `isp_embarq.ipset`                           | Embarq / CenturyLink ISP IPs          | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_embarq.ipset)                           |
-| `isp_frontier_communications.ipset`          | Frontier Communications ISP IPs       | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_frontier_communications.ipset)          |
-| `isp_qwest.ipset`                            | Qwest / CenturyLink ISP IPs           | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_qwest.ipset)                            |
-| `isp_spacex_starlink.ipset`                  | SpaceX Starlink satellite ISP IPs     | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_spacex_starlink.ipset)                  |
-| `isp_sprint.ipset`                           | Sprint ISP IPs                        | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_sprint.ipset)                           |
-| `isp_suddenlink_altice_optimum.ipset`        | Suddenlink / Altice / Optimum ISP IPs | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_suddenlink_altice_optimum.ipset)        |
-| `isp_verizon.ipset`                          | Verizon ISP IPs                       | ★⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/isp_verizon.ipset)                          |
+Each time lfd is restarted a check is made of the preceding structure and any
+missing files are recreated. This process also creates the configuration file
+for Apache in /etc/apache2/conf.d/csf.messenger.conf and restarts httpd.
 
+/etc/apache2/conf.d/csf.messenger.conf contains all the VirtualHost directives
+to serve the MESSENGERV2 services.
 
-<br />
-<br />
+Translation of /home/csf/en.php is possible by creating the appropriate
+[abbr].php file.
 
-#### Geographical Databases
+The HTML and HTTPS server ports should NOT be added to the TCP_IN list.
 
-These blocklists let you control which geographical locations can access your server. They can be used as either a whitelist or a blacklist and include both **continents** and **countries**.  
+As Apache is handling all requests for HTML and HTTPS connections, all
+scripting for the service is provided by the files in /home/csf/public_html/
+which allows the use of PHP and CGI scripts.
 
-All data is sourced directly from the GeoLite2 Database.
+15. Block Reporting
+###################
 
-<br />
+lfd can run an external script when it performs and IP address block following
+for example a login failure. This is done by setting the configuration variable
+BLOCK_REPORT to a script that must be executable. The following parameters are
+passed the the script as arguments:
 
-##### General
+ARG 1 = IP Address # The IP address or CIDR being blocked
+ARG 2 = ports # Port, comma separated list or * for all ports
+ARG 3 = permanent # 0=temporary block, 1=permanent block
+ARG 4 = inout # Direction of block: in, out or inout
+ARG 5 = timeout # If a temporary block, TTL in seconds, otherwise 0
+ARG 6 = message # Message containing reason for block
+ARG 7 = logs # The logs lines that triggered the block (will contain
+# line feeds between each log line)
+ARG 8 = trigger # The configuration settings triggered
 
-| Set | Description | Severity | View |
-| --- | --- | --- | --- |
-| `GeoLite2 Database` | <sub>Lists IPs by continent and country from GeoLite2 database. Contains both IPv4 and IPv6 subnets</sub> | ★★★★★ | [view](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/) |
-| `Ip2Location Database` | <sub>Coming soon</sub> | ★★★★★ | [view](https://lite.ip2location.com/database-download) |
+lfd launches the BLOCK_REPORT in a forked process which terminates after 10
+seconds if not completed by then. It runs under the root account, so great care
+should be exercised with regard to security of the BLOCK_REPORT script.
 
-<br />
+To also run an external script when a temporary block is unblocked by lfd.
+UNBLOCK_REPORT can be the full path of the external script which must be
+executable. The following parameters are passed the the script as arguments:
 
-##### Continents
+ARG 1 = IP Address # The IP address or CIDR being blocked
+ARG 2 = port* # Port, there could be multiple unblocks for each IP
 
-These blocklists let you control which geographical locations can access your server. They can be used as either a whitelist or a blacklist and include both **continents** and **countries**.  
+[*] If a port was specified in the initial block.
 
-All data is sourced directly from the GeoLite2 Database.
+16. Port Flood Protection
+#########################
 
-| Set                             | Description                      | Risk     | View                                                                     |
-|---------------------------------|----------------------------------|----------|--------------------------------------------------------------------------|
-| `continent_africa.ipset`        | All IPs located in Africa        | ★★★⚝⚝  | [view](https://blocklist.configserver.dev/continent_africa.ipset)        |
-| `continent_antartica.ipset`     | All IPs located in Antarctica    | ⚝⚝⚝⚝⚝  | [view](https://blocklist.configserver.dev/continent_antartica.ipset)     |
-| `continent_asia.ipset`          | All IPs located in Asia          | ★★★★⚝  | [view](https://blocklist.configserver.dev/continent_asia.ipset)          |
-| `continent_europe.ipset`        | All IPs located in Europe        | ★★★⚝⚝  | [view](https://blocklist.configserver.dev/continent_europe.ipset)        |
-| `continent_north_america.ipset` | All IPs located in North America | ★★★★⚝  | [view](https://blocklist.configserver.dev/continent_north_america.ipset) |
-| `continent_oceania.ipset`       | All IPs located in Oceania       | ★⚝⚝⚝⚝  | [view](https://blocklist.configserver.dev/continent_oceania.ipset)       |
-| `continent_south_america.ipset` | All IPs located in South America | ★★⚝⚝⚝  | [view](https://blocklist.configserver.dev/continent_south_america.ipset) |
+This option configures iptables to offer protection from DOS attacks against
+specific ports. This option limits the number of connections per time interval
+that new connections can be made to specific ports.
 
+This feature does not work on servers that do not have the iptables module
+ipt_recent loaded. Typically, this will be with Monolithic kernels. VPS server
+admins should check with their VPS host provider that the iptables module is
+included.
 
-<br />
+By default ipt_recent tracks only the last 100 IP addresses. The tracked IP
+addresses can be viewed in /proc/net/ipt_recent/* where the port number is the
+filename.
 
-##### Countries
+Syntax for the PORTFLOOD setting:
 
-These blocklists let you control which geographical locations can access your server. They can be used as either a whitelist or a blacklist and include both **continents** and **countries**.  
+PORTFLOOD is a comma separated list of:
+port;protocol;hit count*;interval seconds
 
-All data is sourced directly from the GeoLite2 Database.
+So, a setting of PORTFLOOD = "22;tcp;5;300,80;tcp;20;5" means:
 
-| Set                                                          | Description                                  | Severity   | View                                                                                                  |
-|--------------------------------------------------------------|----------------------------------------------|------------|-------------------------------------------------------------------------------------------------------|
-| `country_afghanistan.ipset`                                  | Afghanistan                                  | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_afghanistan.ipset)                                  |
-| `country_aland_islands.ipset`                                | Aland Islands                                | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_aland_islands.ipset)                                |
-| `country_albania.ipset`                                      | Albania                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_albania.ipset)                                      |
-| `country_algeria.ipset`                                      | Algeria                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_algeria.ipset)                                      |
-| `country_american_samoa.ipset`                               | American Samoa                               | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_american_samoa.ipset)                               |
-| `country_andorra.ipset`                                      | Andorra                                      | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_andorra.ipset)                                      |
-| `country_angola.ipset`                                       | Angola                                       | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_angola.ipset)                                       |
-| `country_anguilla.ipset`                                     | Anguilla                                     | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_anguilla.ipset)                                     |
-| `country_antarctica.ipset`                                   | Antarctica                                   | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_antarctica.ipset)                                   |
-| `country_antigua_barbuda.ipset`                              | Antigua and Barbuda                          | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_antigua_barbuda.ipset)                              |
-| `country_argentina.ipset`                                    | Argentina                                    | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_argentina.ipset)                                    |
-| `country_armenia.ipset`                                      | Armenia                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_armenia.ipset)                                      |
-| `country_aruba.ipset`                                        | Aruba                                        | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_aruba.ipset)                                        |
-| `country_australia.ipset`                                    | Australia                                    | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_australia.ipset)                                    |
-| `country_austria.ipset`                                      | Austria                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_austria.ipset)                                      |
-| `country_azerbaijan.ipset`                                   | Azerbaijan                                   | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_azerbaijan.ipset)                                   |
-| `country_bahamas.ipset`                                      | The Bahamas                                  | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_bahamas.ipset)                                      |
-| `country_bahrain.ipset`                                      | Bahrain                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_bahrain.ipset)                                      |
-| `country_bangladesh.ipset`                                   | Bangladesh                                   | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_bangladesh.ipset)                                   |
-| `country_barbados.ipset`                                     | Barbados                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_barbados.ipset)                                     |
-| `country_belarus.ipset`                                      | Belarus                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_belarus.ipset)                                      |
-| `country_belgium.ipset`                                      | Belgium                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_belgium.ipset)                                      |
-| `country_belize.ipset`                                       | Belize                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_belize.ipset)                                       |
-| `country_benin.ipset`                                        | Benin                                        | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_benin.ipset)                                        |
-| `country_bermuda.ipset`                                      | Bermuda                                      | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_bermuda.ipset)                                      |
-| `country_bhutan.ipset`                                       | Bhutan                                       | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_bhutan.ipset)                                       |
-| `country_bolivia.ipset`                                      | Bolivia                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_bolivia.ipset)                                      |
-| `country_bonaire_sint_eustatius_saba.ipset`                  | Bonaire, Sint Eustatius, and Saba            | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_bonaire_sint_eustatius_saba.ipset)                  |
-| `country_bosnia_herzegovina.ipset`                           | Bosnia and Herzegovina                       | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_bosnia_herzegovina.ipset)                           |
-| `country_botswana.ipset`                                     | Botswana                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_botswana.ipset)                                     |
-| `country_bouvet_island.ipset`                                | Bouvet Island                                | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_bouvet_island.ipset)                                |
-| `country_brazil.ipset`                                       | Brazil                                       | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_brazil.ipset)                                       |
-| `country_british_indian_ocean_territory.ipset`               | British Indian Ocean Territory               | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_british_indian_ocean_territory.ipset)               |
-| `country_british_virgin_islands.ipset`                       | British Virgin Islands                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_british_virgin_islands.ipset)                       |
-| `country_brunei_darussalam.ipset`                            | Brunei                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_brunei_darussalam.ipset)                            |
-| `country_bulgaria.ipset`                                     | Bulgaria                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_bulgaria.ipset)                                     |
-| `country_burkina_faso.ipset`                                 | Burkina Faso                                 | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_burkina_faso.ipset)                                 |
-| `country_burundi.ipset`                                      | Burundi                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_burundi.ipset)                                      |
-| `country_cambodia.ipset`                                     | Cambodia                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_cambodia.ipset)                                     |
-| `country_cameroon.ipset`                                     | Cameroon                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_cameroon.ipset)                                     |
-| `country_canada.ipset`                                       | Canada                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_canada.ipset)                                       |
-| `country_cape_verde.ipset`                                   | Cape Verde                                   | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_cape_verde.ipset)                                   |
-| `country_cayman_islands.ipset`                               | Cayman Islands                               | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_cayman_islands.ipset)                               |
-| `country_cc.ipset`                                           | Cocos (Keeling) Islands                      | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_cc.ipset)                                           |
-| `country_central_african_republic.ipset`                     | Central African Republic                     | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_central_african_republic.ipset)                     |
-| `country_chad.ipset`                                         | Chad                                         | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_chad.ipset)                                         |
-| `country_chile.ipset`                                        | Chile                                        | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_chile.ipset)                                        |
-| `country_china.ipset`                                        | China                                        | ★★★★★    | [view](https://blocklist.configserver.dev/country_china.ipset)                                        |
-| `country_christmas_island.ipset`                             | Christmas Island                             | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_christmas_island.ipset)                             |
-| `country_colombia.ipset`                                     | Colombia                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_colombia.ipset)                                     |
-| `country_comoros.ipset`                                      | Comoros                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_comoros.ipset)                                      |
-| `country_congo.ipset`                                        | Congo                                        | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_congo.ipset)                                        |
-| `country_cook_islands.ipset`                                 | Cook Islands                                 | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_cook_islands.ipset)                                 |
-| `country_costa_rica.ipset`                                   | Costa Rica                                   | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_costa_rica.ipset)                                   |
-| `country_cote_divoire.ipset`                                 | Côte d'Ivoire                                | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_cote_divoire.ipset)                                 |
-| `country_croatia.ipset`                                      | Croatia                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_croatia.ipset)                                      |
-| `country_cuba.ipset`                                         | Cuba                                         | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_cuba.ipset)                                         |
-| `country_curacao.ipset`                                      | Curaçao                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_curacao.ipset)                                      |
-| `country_cyprus.ipset`                                       | Cyprus                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_cyprus.ipset)                                       |
-| `country_czech_republic.ipset`                               | Czech Republic                               | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_czech_republic.ipset)                               |
-| `country_democratic_republic_congo.ipset`                    | Democratic Republic of the Congo             | ★★★★★    | [view](https://blocklist.configserver.dev/country_democratic_republic_congo.ipset)                    |
-| `country_denmark.ipset`                                      | Denmark                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_denmark.ipset)                                      |
-| `country_djibouti.ipset`                                     | Djibouti                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_djibouti.ipset)                                     |
-| `country_dominica.ipset`                                     | Dominica                                     | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_dominica.ipset)                                     |
-| `country_dominican_republic.ipset`                           | Dominican Republic                           | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_dominican_republic.ipset)                           |
-| `country_ecuador.ipset`                                      | Ecuador                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_ecuador.ipset)                                      |
-| `country_egypt.ipset`                                        | Egypt                                        | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_egypt.ipset)                                        |
-| `country_el_salvador.ipset`                                  | El Salvador                                  | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_el_salvador.ipset)                                  |
-| `country_equatorial_guinea.ipset`                            | Equatorial Guinea                            | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_equatorial_guinea.ipset)                            |
-| `country_eritrea.ipset`                                      | Eritrea                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_eritrea.ipset)                                      |
-| `country_estonia.ipset`                                      | Estonia                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_estonia.ipset)                                      |
-| `country_eswatini.ipset`                                     | Eswatini                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_eswatini.ipset)                                     |
-| `country_ethiopia.ipset`                                     | Ethiopia                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_ethiopia.ipset)                                     |
-| `country_europe.ipset`                                       | Europe                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_europe.ipset)                                       |
-| `country_falkland_islands_malvinas.ipset`                    | Falkland Islands (Malvinas)                  | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_falkland_islands_malvinas.ipset)                    |
-| `country_faroe_islands.ipset`                                | Faroe Islands                                | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_faroe_islands.ipset)                                |
-| `country_fiji.ipset`                                         | Fiji                                         | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_fiji.ipset)                                         |
-| `country_finland.ipset`                                      | Finland                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_finland.ipset)                                      |
-| `country_france.ipset`                                       | France                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_france.ipset)                                       |
-| `country_french_guiana.ipset`                                | French Guiana                                | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_french_guiana.ipset)                                |
-| `country_french_polynesia.ipset`                             | French Polynesia                             | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_french_polynesia.ipset)                             |
-| `country_french_southern_territories.ipset`                  | French Southern Territories                  | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_french_southern_territories.ipset)                  |
-| `country_gabon.ipset`                                        | Gabon                                        | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_gabon.ipset)                                        |
-| `country_gambia.ipset`                                       | Gambia                                       | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_gambia.ipset)                                       |
-| `country_georgia.ipset`                                      | Georgia                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_georgia.ipset)                                      |
-| `country_germany.ipset`                                      | Germany                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_germany.ipset)                                      |
-| `country_ghana.ipset`                                        | Ghana                                        | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_ghana.ipset)                                        |
-| `country_gibraltar.ipset`                                    | Gibraltar                                    | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_gibraltar.ipset)                                    |
-| `country_great_britain.ipset`                                | Great Britain                                | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_great_britain.ipset)                                |
-| `country_greece.ipset`                                       | Greece                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_greece.ipset)                                       |
-| `country_greenland.ipset`                                    | Greenland                                    | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_greenland.ipset)                                    |
-| `country_grenada.ipset`                                      | Grenada                                      | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_grenada.ipset)                                      |
-| `country_guadeloupe.ipset`                                   | Guadeloupe                                   | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_guadeloupe.ipset)                                   |
-| `country_guam.ipset`                                         | Guam                                         | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_guam.ipset)                                         |
-| `country_guatemala.ipset`                                    | Guatemala                                    | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_guatemala.ipset)                                    |
-| `country_guernsey.ipset`                                     | Guernsey                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_guernsey.ipset)                                     |
-| `country_guineabissau.ipset`                                 | Guinea-Bissau                                | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_guineabissau.ipset)                                 |
-| `country_guinea.ipset`                                       | Guinea                                       | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_guinea.ipset)                                       |
-| `country_guyana.ipset`                                       | Guyana                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_guyana.ipset)                                       |
-| `country_haiti.ipset`                                        | Haiti                                        | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_haiti.ipset)                                        |
-| `country_heard_island_and_mcdonald_islands.ipset`            | Heard Island and McDonald Islands            | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_heard_island_and_mcdonald_islands.ipset)            |
-| `country_honduras.ipset`                                     | Honduras                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_honduras.ipset)                                     |
-| `country_hong_kong.ipset`                                    | Hong Kong                                    | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_hong_kong.ipset)                                    |
-| `country_hungary.ipset`                                      | Hungary                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_hungary.ipset)                                      |
-| `country_iceland.ipset`                                      | Iceland                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_iceland.ipset)                                      |
-| `country_india.ipset`                                        | India                                        | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_india.ipset)                                        |
-| `country_indonesia.ipset`                                    | Indonesia                                    | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_indonesia.ipset)                                    |
-| `country_iran.ipset`                                         | Iran                                         | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_iran.ipset)                                         |
-| `country_iraq.ipset`                                         | Iraq                                         | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_iraq.ipset)                                         |
-| `country_ireland.ipset`                                      | Ireland                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_ireland.ipset)                                      |
-| `country_isle_of_man.ipset`                                  | Isle of Man                                  | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_isle_of_man.ipset)                                  |
-| `country_israel.ipset`                                       | Israel                                       | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_israel.ipset)                                       |
-| `country_italy.ipset`                                        | Italy                                        | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_italy.ipset)                                        |
-| `country_jamaica.ipset`                                      | Jamaica                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_jamaica.ipset)                                      |
-| `country_japan.ipset`                                        | Japan                                        | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_japan.ipset)                                        |
-| `country_jersey.ipset`                                       | Jersey                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_jersey.ipset)                                       |
-| `country_jordan.ipset`                                       | Jordan                                       | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_jordan.ipset)                                       |
-| `country_kazakhstan.ipset`                                   | Kazakhstan                                   | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_kazakhstan.ipset)                                   |
-| `country_kenya.ipset`                                        | Kenya                                        | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_kenya.ipset)                                        |
-| `country_kiribati.ipset`                                     | Kiribati                                     | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_kiribati.ipset)                                     |
-| `country_kosovo.ipset`                                       | Kosovo                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_kosovo.ipset)                                       |
-| `country_kuwait.ipset`                                       | Kuwait                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_kuwait.ipset)                                       |
-| `country_kyrgyzstan.ipset`                                   | Kyrgyzstan                                   | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_kyrgyzstan.ipset)                                   |
-| `country_laos.ipset`                                         | Laos                                         | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_laos.ipset)                                         |
-| `country_latvia.ipset`                                       | Latvia                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_latvia.ipset)                                       |
-| `country_lebanon.ipset`                                      | Lebanon                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_lebanon.ipset)                                      |
-| `country_lesotho.ipset`                                      | Lesotho                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_lesotho.ipset)                                      |
-| `country_liberia.ipset`                                      | Liberia                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_liberia.ipset)                                      |
-| `country_libya.ipset`                                        | Libya                                        | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_libya.ipset)                                        |
-| `country_liechtenstein.ipset`                                | Liechtenstein                                | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_liechtenstein.ipset)                                |
-| `country_lithuania.ipset`                                    | Lithuania                                    | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_lithuania.ipset)                                    |
-| `country_luxembourg.ipset`                                   | Luxembourg                                   | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_luxembourg.ipset)                                   |
-| `country_macedonia_republic.ipset`                           | Macedonia                                    | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_macedonia_republic.ipset)                           |
-| `country_madagascar.ipset`                                   | Madagascar                                   | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_madagascar.ipset)                                   |
-| `country_malawi.ipset`                                       | Malawi                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_malawi.ipset)                                       |
-| `country_malaysia.ipset`                                     | Malaysia                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_malaysia.ipset)                                     |
-| `country_maldives.ipset`                                     | Maldives                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_maldives.ipset)                                     |
-| `country_mali.ipset`                                         | Mali                                         | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_mali.ipset)                                         |
-| `country_malta.ipset`                                        | Malta                                        | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_malta.ipset)                                        |
-| `country_marshall_islands.ipset`                             | Marshall Islands                             | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_marshall_islands.ipset)                             |
-| `country_martinique.ipset`                                   | Martinique                                   | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_martinique.ipset)                                   |
-| `country_mauritania.ipset`                                   | Mauritania                                   | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_mauritania.ipset)                                   |
-| `country_mauritius.ipset`                                    | Mauritius                                    | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_mauritius.ipset)                                    |
-| `country_mayotte.ipset`                                      | Mayotte                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_mayotte.ipset)                                      |
-| `country_mexico.ipset`                                       | Mexico                                       | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_mexico.ipset)                                       |
-| `country_micronesia.ipset`                                   | Micronesia                                   | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_micronesia.ipset)                                   |
-| `country_monaco.ipset`                                       | Monaco                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_monaco.ipset)                                       |
-| `country_mongolia.ipset`                                     | Mongolia                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_mongolia.ipset)                                     |
-| `country_montenegro.ipset`                                   | Montenegro                                   | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_montenegro.ipset)                                   |
-| `country_montserrat.ipset`                                   | Montserrat                                   | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_montserrat.ipset)                                   |
-| `country_morocco.ipset`                                      | Morocco                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_morocco.ipset)                                      |
-| `country_mozambique.ipset`                                   | Mozambique                                   | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_mozambique.ipset)                                   |
-| `country_myanmar.ipset`                                      | Myanmar                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_myanmar.ipset)                                      |
-| `country_namibia.ipset`                                      | Namibia                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_namibia.ipset)                                      |
-| `country_nauru.ipset`                                        | Nauru                                        | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_nauru.ipset)                                        |
-| `country_nepal.ipset`                                        | Nepal                                        | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_nepal.ipset)                                        |
-| `country_netherlands.ipset`                                  | Netherlands                                  | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_netherlands.ipset)                                  |
-| `country_new_caledonia.ipset`                                | New Caledonia                                | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_new_caledonia.ipset)                                |
-| `country_new_zealand.ipset`                                  | New Zealand                                  | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_new_zealand.ipset)                                  |
-| `country_nicaragua.ipset`                                    | Nicaragua                                    | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_nicaragua.ipset)                                    |
-| `country_nigeria.ipset`                                      | Nigeria                                      | ★★★★★    | [view](https://blocklist.configserver.dev/country_nigeria.ipset)                                      |
-| `country_niger.ipset`                                        | Niger                                        | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_niger.ipset)                                        |
-| `country_niue.ipset`                                         | Niue                                         | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_niue.ipset)                                         |
-| `country_norfolk_island.ipset`                               | Norfolk Island                               | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_norfolk_island.ipset)                               |
-| `country_northern_mariana_islands.ipset`                     | Northern Mariana Islands                     | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_northern_mariana_islands.ipset)                     |
-| `country_north_korea.ipset`                                  | North Korea                                  | ★★★★★    | [view](https://blocklist.configserver.dev/country_north_korea.ipset)                                  |
-| `country_norway.ipset`                                       | Norway                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_norway.ipset)                                       |
-| `country_oman.ipset`                                         | Oman                                         | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_oman.ipset)                                         |
-| `country_pakistan.ipset`                                     | Pakistan                                     | ★★★★★    | [view](https://blocklist.configserver.dev/country_pakistan.ipset)                                     |
-| `country_palau.ipset`                                        | Palau                                        | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_palau.ipset)                                        |
-| `country_palestine.ipset`                                    | Palestine                                    | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_palestine.ipset)                                    |
-| `country_panama.ipset`                                       | Panama                                       | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_panama.ipset)                                       |
-| `country_papua_new_guinea.ipset`                             | Papua New Guinea                             | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_papua_new_guinea.ipset)                             |
-| `country_paraguay.ipset`                                     | Paraguay                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_paraguay.ipset)                                     |
-| `country_peru.ipset`                                         | Peru                                         | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_peru.ipset)                                         |
-| `country_philippines.ipset`                                  | Philippines                                  | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_philippines.ipset)                                  |
-| `country_pitcairn.ipset`                                     | Pitcairn Islands                             | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_pitcairn.ipset)                                     |
-| `country_poland.ipset`                                       | Poland                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_poland.ipset)                                       |
-| `country_portugal.ipset`                                     | Portugal                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_portugal.ipset)                                     |
-| `country_puerto_rico.ipset`                                  | Puerto Rico                                  | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_puerto_rico.ipset)                                  |
-| `country_qatar.ipset`                                        | Qatar                                        | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_qatar.ipset)                                        |
-| `country_republic_moldova.ipset`                             | Moldova                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_republic_moldova.ipset)                             |
-| `country_reunion.ipset`                                      | Réunion                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_reunion.ipset)                                      |
-| `country_romania.ipset`                                      | Romania                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_romania.ipset)                                      |
-| `country_russia.ipset`                                       | Russia                                       | ★★★★★    | [view](https://blocklist.configserver.dev/country_russia.ipset)                                       |
-| `country_rwanda.ipset`                                       | Rwanda                                       | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_rwanda.ipset)                                       |
-| `country_saint_barthelemy.ipset`                             | Saint Barthélemy                             | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_saint_barthelemy.ipset)                             |
-| `country_saint_helena.ipset`                                 | Saint Helena                                 | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_saint_helena.ipset)                                 |
-| `country_saint_kitts_nevis.ipset`                            | Saint Kitts and Nevis                        | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_saint_kitts_nevis.ipset)                            |
-| `country_saint_lucia.ipset`                                  | Saint Lucia                                  | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_saint_lucia.ipset)                                  |
-| `country_saint_martin_north.ipset`                           | Saint Martin (North)                         | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_saint_martin_north.ipset)                           |
-| `country_saint_pierre_miquelon.ipset`                        | Saint Pierre and Miquelon                    | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_saint_pierre_miquelon.ipset)                        |
-| `country_saint_vincent_grenadines.ipset`                     | Saint Vincent and the Grenadines             | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_saint_vincent_grenadines.ipset)                     |
-| `country_samoa.ipset`                                        | Samoa                                        | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_samoa.ipset)                                        |
-| `country_san_marino.ipset`                                   | San Marino                                   | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_san_marino.ipset)                                   |
-| `country_sao_tome_principe.ipset`                            | São Tomé and Príncipe                        | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_sao_tome_principe.ipset)                            |
-| `country_saudi_arabia.ipset`                                 | Saudi Arabia                                 | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_saudi_arabia.ipset)                                 |
-| `country_senegal.ipset`                                      | Senegal                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_senegal.ipset)                                      |
-| `country_serbia.ipset`                                       | Serbia                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_serbia.ipset)                                       |
-| `country_seychelles.ipset`                                   | Seychelles                                   | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_seychelles.ipset)                                   |
-| `country_sierra_leone.ipset`                                 | Sierra Leone                                 | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_sierra_leone.ipset)                                 |
-| `country_singapore.ipset`                                    | Singapore                                    | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_singapore.ipset)                                    |
-| `country_sint_maarten_south.ipset`                           | Sint Maarten (South)                         | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_sint_maarten_south.ipset)                           |
-| `country_slovakia.ipset`                                     | Slovakia                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_slovakia.ipset)                                     |
-| `country_slovenia.ipset`                                     | Slovenia                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_slovenia.ipset)                                     |
-| `country_solomon_islands.ipset`                              | Solomon Islands                              | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_solomon_islands.ipset)                              |
-| `country_somalia.ipset`                                      | Somalia                                      | ★★★★★    | [view](https://blocklist.configserver.dev/country_somalia.ipset)                                      |
-| `country_south_africa.ipset`                                 | South Africa                                 | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_south_africa.ipset)                                 |
-| `country_south_georgia_and_the_south_sandwich_islands.ipset` | South Georgia and the South Sandwich Islands | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_south_georgia_and_the_south_sandwich_islands.ipset) |
-| `country_south_korea.ipset`                                  | South Korea                                  | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_south_korea.ipset)                                  |
-| `country_south_sudan.ipset`                                  | South Sudan                                  | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_south_sudan.ipset)                                  |
-| `country_spain.ipset`                                        | Spain                                        | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_spain.ipset)                                        |
-| `country_sri_lanka.ipset`                                    | Sri Lanka                                    | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_sri_lanka.ipset)                                    |
-| `country_sudan.ipset`                                        | Sudan                                        | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_sudan.ipset)                                        |
-| `country_suriname.ipset`                                     | Suriname                                     | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_suriname.ipset)                                     |
-| `country_svalbard_jan_mayen.ipset`                           | Svalbard and Jan Mayen                       | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_svalbard_jan_mayen.ipset)                           |
-| `country_sweden.ipset`                                       | Sweden                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_sweden.ipset)                                       |
-| `country_switzerland.ipset`                                  | Switzerland                                  | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_switzerland.ipset)                                  |
-| `country_syria.ipset`                                        | Syria                                        | ★★★★★    | [view](https://blocklist.configserver.dev/country_syria.ipset)                                        |
-| `country_taiwan.ipset`                                       | Taiwan                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_taiwan.ipset)                                       |
-| `country_tajikistan.ipset`                                   | Tajikistan                                   | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_tajikistan.ipset)                                   |
-| `country_tanzania.ipset`                                     | Tanzania                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_tanzania.ipset)                                     |
-| `country_thailand.ipset`                                     | Thailand                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_thailand.ipset)                                     |
-| `country_timorleste.ipset`                                   | Timor-Leste                                  | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_timorleste.ipset)                                   |
-| `country_togo.ipset`                                         | Togo                                         | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_togo.ipset)                                         |
-| `country_tokelau.ipset`                                      | Tokelau                                      | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_tokelau.ipset)                                      |
-| `country_tonga.ipset`                                        | Tonga                                        | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_tonga.ipset)                                        |
-| `country_trinidad_tobago.ipset`                              | Trinidad and Tobago                          | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_trinidad_tobago.ipset)                              |
-| `country_tunisia.ipset`                                      | Tunisia                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_tunisia.ipset)                                      |
-| `country_turkey.ipset`                                       | Turkey                                       | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_turkey.ipset)                                       |
-| `country_turkmenistan.ipset`                                 | Turkmenistan                                 | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_turkmenistan.ipset)                                 |
-| `country_turks_caicos_islands.ipset`                         | Turks and Caicos Islands                     | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_turks_caicos_islands.ipset)                         |
-| `country_tuvalu.ipset`                                       | Tuvalu                                       | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_tuvalu.ipset)                                       |
-| `country_uganda.ipset`                                       | Uganda                                       | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_uganda.ipset)                                       |
-| `country_ukraine.ipset`                                      | Ukraine                                      | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_ukraine.ipset)                                      |
-| `country_united_arab_emirates.ipset`                         | United Arab Emirates                         | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_united_arab_emirates.ipset)                         |
-| `country_united_states.ipset`                                | United States                                | ★★★★⚝    | [view](https://blocklist.configserver.dev/country_united_states.ipset)                                |
-| `country_united_states_minor_outlying_islands.ipset`         | US Minor Outlying Islands                    | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_united_states_minor_outlying_islands.ipset)         |
-| `country_united_states_virgin_islands.ipset`                 | US Virgin Islands                            | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_united_states_virgin_islands.ipset)                 |
-| `country_uruguay.ipset`                                      | Uruguay                                      | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_uruguay.ipset)                                      |
-| `country_uzbekistan.ipset`                                   | Uzbekistan                                   | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_uzbekistan.ipset)                                   |
-| `country_vanuatu.ipset`                                      | Vanuatu                                      | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_vanuatu.ipset)                                      |
-| `country_vatican_city_holy_see.ipset`                        | Vatican City / Holy See                      | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_vatican_city_holy_see.ipset)                        |
-| `country_venezuela.ipset`                                    | Venezuela                                    | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_venezuela.ipset)                                    |
-| `country_vietnam.ipset`                                      | Vietnam                                      | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_vietnam.ipset)                                      |
-| `country_wallis_futuna.ipset`                                | Wallis and Futuna                            | ⚝⚝⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_wallis_futuna.ipset)                                |
-| `country_western_sahara.ipset`                               | Western Sahara                               | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_western_sahara.ipset)                               |
-| `country_yemen.ipset`                                        | Yemen                                        | ★★★★★    | [view](https://blocklist.configserver.dev/country_yemen.ipset)                                        |
-| `country_zambia.ipset`                                       | Zambia                                       | ★★⚝⚝⚝    | [view](https://blocklist.configserver.dev/country_zambia.ipset)                                       |
-| `country_zimbabwe.ipset`                                     | Zimbabwe                                     | ★★★⚝⚝    | [view](https://blocklist.configserver.dev/country_zimbabwe.ipset)                                     |
-
-<br />
-<br />
-
-#### Transmission (BitTorrent Client)
-
-This section includes blocklists which you can import into the [bittorrent client Transmission](https://transmissionbt.com/).
-
-<br />
-
-- In this repo, copy the direct URL to the Transmission blocklist, provided below:
-    - https://github.com/Aetherinox/csf-firewall/raw/main/blocklists/transmission/blocklist.gz
-- Open your Transmission application; depending on the version you run, do ONE of the follow two choices:
-    - Paste the link to **Transmission** › `Settings` › `Peers` › `Blocklist`
-    - Paste the link to **Transmission** › `Edit` › `Preferences` › `Privacy` › `Enable Blocklist`
-
-<br />
-
-| Set                  | Description                                                                             | Severity   | View                                                          | Website                             |
-|----------------------|-----------------------------------------------------------------------------------------|------------|---------------------------------------------------------------|-------------------------------------|
-| `transmission.ipset` | A large blocklist for the BitTorrent client [Transmission](https://transmissionbt.com/) | ★★★★★    | [view](https://blocklist.configserver.dev/transmission.ipset) | [view](https://transmissionbt.com/) |
-
-
-<br />
-<br />
-<br />
-
-### 3rd-party Blocklists
-
-There are many vendors that also host their own blocklists. You can find these vendors within the file `/etc/csf/csf.blocklists`. Vendors included are:
-
-- [Spamhaus](http://spamhaus.org/drop/drop.txt)
-- [DShield](https://dshield.org/block.txt)
-- [TOR Exit Nodes](https://trac.torproject.org/projects/tor/wiki/doc/TorDNSExitList)
-- [BOGON](http://team-cymru.org/Services/Bogons/)
-- [Project Honey Pot](http://projecthoneypot.org)
-- [C.I. Army Malicious IP List](http://ciarmy.com)
-- [BruteForceBlocker](http://danger.rulez.sk/index.php/bruteforceblocker/)
-- [MaxMind GeoIP Anonymous Proxies](https://maxmind.com/en/anonymous_proxies)
-- [Blocklist.de](https://blocklist.de)
-- [Stop Forum Spam](http://stopforumspam.com/downloads/)
-- [GreenSnow Hack List](https://greensnow.co)
-
-<br />
-
-For more information on blocklists, visit our official documentation and read the [Chapter: Blocklists](https://aetherinox.github.io/csf-firewall/usage/blocklists/). Our documentation includes how to enable blocklists, and more information on what they do.
-
-<br />
-
----
-
-<br />
-
-## Notes
-
-This section simply outlines notes about ConfigServer Firewall
-
-<br />
-
-### CSF to Iptable Commands
-
-ConfigServer Firewall is a way to manage your existing firewall rules. In order for ConfigServer Firewall to work, your server must have the library `iptables` installed. ConfigServer Firewall is basically a wrapper for iptables, and has the additional option of adding a web UI so that you can visually manage your firewall instead of using commands. Without `iptables`, ConfigServer Firewall is useless.
-
-<br />
-
-If you were to uninstall ConfigServer Firewall from your server; you would still have the ability to do everything CSF can, but you would have to manually run commands on the package iptables. 
-
-<br />
-
-This section gives you the commands that ConfigServer Firewall uses to manage your firewall, and gives you the iptables alternative command if you do not wish to use CSF.
-
-<br />
-<br />
-
-#### Default Policy
-
-ConfigServer Firewall and iptables come with three main CHAINS. ConfigServer Firewall will set these three main chains to have the policy `DROP`. 
-
-This `DROP` policy means that no connections are allowed to access any of these chains on your server, meaning nobody can connect to your server; unless you have added rules to allow access by an IP address or port. 
-
-To set the policy of these chains; run:
-
-```shell
-sudo iptables -P INPUT DROP
-sudo iptables -P FORWARD DROP 
-sudo iptables -P OUTPUT DROP
-```
-
-<br />
-
-You can select from the list of available policies. 
-
-- `ACCEPT` Accepts packets into or out of your server.
-- `DROP` Denies access to a port or server, but makes the connection appear to be to an unoccupied IP address. Scanners may choose not to continue scanning addresses which appear unoccupied.
-- `REJECT` Denies access to a port or server, but tells the connecting party that the server and port are really there, but they've been denied access to transmit data or connect.
-
-<br />
-
-As a general rule:
-  - Use `ACCEPT` to allow access to a port or IP by a connecting party.
-  - Use `DROP` for connections to hosts you don't want people to see.
-  - Use `REJECT` when you want the other end to know the port is unreachable.
-
-<br />
-<br />
-
-#### Clear Iptables / Open Firewall
-
-To clear every single iptables rule and open your firewall back up, run the following command. Note that this will completely turn off iptables / CSF's blocking abilities. Your server will be open to connections:
-
-```shell
-sudo iptables -F
-sudo iptables -X
-sudo iptables -t nat -F
-sudo iptables -t nat -X
-sudo iptables -t mangle -F
-sudo iptables -t mangle -X
-sudo iptables -P INPUT ACCEPT
-sudo iptables -P FORWARD ACCEPT
-sudo iptables -P OUTPUT ACCEPT
-```
-
-<br />
-<br />
-
-#### List Rules
-
-To list all of your iptable rules, and the rules that CSF has added to your firewall, run:
-
-```shell
-sudo iptables --list --line-numbers -n
-```
-
-<br />
-<br />
-
-#### List Chains
-
-To list all of the chains in iptables, run:
-
-```shell
-sudo iptables -L | grep Chain
-```
-
-<br />
-
-A list of the available CHAINS are provided below:
-
-> [!NOTE]
-> Out of box, ConfigServer Firewall & Iptables makes use of three chains
->   - `INPUT` Packets coming _from_ the network and going _to_ your server 
->   - `OUTPUT` Packets originating _from_ your server and going _to_ the network.
->   - `FORWARD` Packets forwarded by your server, if/when it acts as a router between different networks such as <sup> `DOCKER` </sup>
-> 
-> **Additional Chains**
->   - `NAT` This table is consulted when a packet that creates a new connection is encountered. It consists of four built-ins:
->     - `PREROUTING` for altering packets as soon as they come in
->     - `INPUT` for altering packets destined for local sockets
->     - `OUTPUT` for altering locally-generated packets before routing
->     - `POSTROUTING` for altering packets as they are about to go out
->   - `MANGLE` Used for specialized packet alteration.
->   - `DOCKER` Rules that determine whether a packet that is not part of an established connection should be accepted, based on the port forwarding configuration of running containers.
->   - `DOCKER-USER` A placeholder for user-defined rules that will be processed before rules in the <sup> `DOCKER-FORWARD` </sup> and <sup> `DOCKER` </sup> chains.
->   - `DOCKER-FORWARD` The first stage of processing for Docker's networks. Rules that pass packets that are not related to established connections to the other Docker chains, as well as rules to accept packets that are part of established connections.
->   - `DOCKER-ISOLATION-STAGE-1` Rules to isolate Docker networks from each other.
->   - `DOCKER-INGRESS` Rules related to Swarm networking.
-
-<br />
-<br />
-
-#### Unblock Port
+1. If more than 5 connections to tcp port 22 within 300 seconds, then block
+that IP address from port 22 for at least 300 seconds after the last packet is
+seen, i.e. there must be a "quiet" period of 300 seconds before the block is
+lifted
 
-If you make use of the ConfigServer Firewall WebUI; one of the features available is the ability to whitelist / allow access to certain ports. If you do not wish to use the WebUI, you can unblock these ports in your terminal using `iptables`.
+2. If more than 20 connections to tcp port 80 within 5 seconds, then block
+that IP address from port 80 for at least 5 seconds after the last packet is
+seen, i.e. there must be a "quiet" period of 5 seconds before the block is
+lifted
 
-To access unblocking ports in CSF, open your WebUI:
+More information about the ipt_recent module can be found in the iptables man
+page and at http://snowman.net/projects/ipt_recent/
 
-<p align="center"><img style="width: 80%;text-align: center;" src="docs/images/readme/20.jpg"></p>
+Note: Blocked IP addresses do not appear in any of the iptables chains when
+using this module. You must manipulate the /proc/net/ipt_recent/* files as per
+the module documentation to view and remove IP addresses that are currently
+blocked if the blocks have not yet expired.
 
-<br />
+Restarting csf resets the ipt_recent tables and removes all of its blocks.
 
-Select **Firewall Configuration**, and then scroll down until you see the settings:
+Note: There are some restrictions when using ipt_recent:
 
-- `TCP_IN`
-- `TCP_OUT`
+1. By default it only tracks 100 addresses per table (we try and increase this
+to 1000 via modprobe)
 
-<br />
+2. By default it only counts 20 packets per address remembered
 
-<p align="center"><img style="width: 80%;text-align: center;" src="docs/images/readme/21.jpg"></p>
+*This means that you need to keep the hit count to below 20.
 
-<br />
+17. External Pre- and Post- Scripts
+###################################
 
-To unblock a port using Iptables using the command that CSF would use, you can run the following. For this example, we will unblock port `43` which can be used for the `whois` package:
+External commands (e.g. iptables rules not covered by csf) can be run before
+and/or after csf sets up the iptables chains and rules.
 
-```shell
-sudo iptables -I OUTPUT ! -o lo -m conntrack --ctstate NEW -p tcp --dport 43 -j ACCEPT
-```
+1. To run external commands before csf configures iptables create the file:
 
-<br />
+/usr/local/csf/bin/csfpre.sh
 
-Remember to change `--dport 43` to the port you wish to unblock, change `-p tcp` to specify either `TCP` or `UDP`, and change `-D OUTPUT` to specify the chain you want the port to allow access through.
+Set that file as executable and add an appropriate shebang interpreter line and
+then whatever external commands you wish to execute.
 
-<br />
+For example:
 
-To re-block port `43` and disallow connections, delete the rule in iptables:
+#!/bin/sh
+/some/path/to/binary -a -b -c etc
 
-```shell
-sudo iptables -D OUTPUT ! -o lo -m conntrack --ctstate NEW -p tcp --dport 43 -j ACCEPT
-```
+Then chmod +x /usr/local/csf/bin/csfpre.sh
 
-<br />
+2. To run external commands after csf configures iptables create the file:
 
-To view the firewall rule in your iptables, run:
+/usr/local/csf/bin/csfpost.sh
 
-```shell
-sudo iptables --list --line-numbers -n
-```
+Set that file as executable and add an appropriate shebang interpreter line and
+then whatever external commands you wish to execute.
 
-<br />
+Note: The scripts can alternatively be placed in /etc/csf/. If a script is found in
+both locations (/etc/csf/ and /usr/local/csf/bin/) then only the script in
+/usr/local/csf/bin/ will be executed.
 
-Running this command should output all your table rules. Your new rule will appear as:
+csfpre.sh/csfpost.sh are run directly. If present, csf chmods the script 0700
+and checks for a shebang. If the shebang is missing #!/bin/bash is added to the
+top. The script is them run.
 
-```
-Chain OUTPUT (policy DROP)
-num  target     prot opt source               destination         
-1    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:43 ctstate NEW
-```
+Note: While csf runs the script with a preset PATH, you MUST use the full path
+to any binaries that you execute within these scripts to ensure they are run
+correctly
 
-<br />
-<br />
+18. lfd Clustering
+##################
 
-#### Allow OpenVPN
+This set of options (CLUSTER*) in csf.conf allows the configuration of an
+lfd cluster environment where a group of servers can share blocks and, via the
+CLI, configuration option changes, allows and removes
 
-To allow OpenVPN through CSF / Iptables, run the following command. Replace `tun0` with your channel adapter name.
+In the configuration there are two comma separated lists of IP addresses:
 
-```shell
-TUN_ADAPTER=$(ip -br l | awk '$1 ~ "^tun[0-9]" { print $1}')
-sudo iptables -A FORWARD -o ${TUN_ADAPTER} -j ACCEPT
-```
+CLUSTER_SENDTO = ""
+CLUSTER_RECVFROM = ""
 
-<br />
+Note: Do not use spaces in these lists
 
-Next, add a `POSTROUTING` rule. If you do not want to use your default adapter name, replace `${ETH_ADAPTER}` with the name. For ours, we will use `eth0`.
+If you want all members of the lfd cluster to send block notifications to each
+other then both settings should be them same. You also need to enable
+CLUSTER_BLOCK (enabled by default) for lfd to automatically send blocks to all
+members in CLUSTER_SENDTO.
 
-```shell
-ETH_ADAPTER=$(ip route | grep default | sed -e "s/^.*dev.//" -e "s/.proto.*//")
-sudo iptables -t nat -A POSTROUTING -o ${ETH_ADAPTER} -j MASQUERADE
-```
+However, you can also set up a cluster such that some members only provide
+notifications to others and do not accept blocks from others. For example, you
+may have a cluster of servers that includes one that hosts a support desk that
+you do not want to block clients from accessing. In such an example you might
+want to exclude the support desk server from the CLUSTER_SENDTO list, but
+include it in the CLUSTER_RECVFROM list.
 
-<br />
+The option CLUSTER_MASTER is the IP address of the master node in the cluster
+allowed to send CLUSTER_CONFIG changes to servers listed in the local
+CLUSTER_SENDTO list. Only cluster members that have CLUSTER_MASTER set to this
+IP address will accept CLUSTER_CONFIG changes.
 
-Now we need to add a few rules for the IP block our OpenVPN server will use. In this example, we'll use `10.8.0.0/24`.
+There is another option, CLUSTER_NAT that should be used if the IP address of
+the server does not appear in ip/ifconfig, for example if it is a NAT
+configuration. If this is the case, add the IP address of the server that this
+configuration is on and used in CLUSTER_SENDTO/CLUSTER_RECVFROM to CLUSTER_NAT.
 
-```shell
-ETH_ADAPTER=$(ip route | grep default | sed -e "s/^.*dev.//" -e "s/.proto.*//")
-sudo iptables -t nat -A POSTROUTING -s "10.8.0.0/24" -o ${ETH_ADAPTER} -j MASQUERADE
-```
+CLUSTER_LOCALADDR can be set if you do not want to use the servers main IP,
+i.e. the first one listed via 0.0.0.0.
 
-<br />
+The CLUSTER_PORT must be set to the same port on all servers. The port should
+NOT be opened in TCP_IN or TCP_OUT as csf will automatically add appropriate in
+and out bound rules to allow communication between cluster members.
 
-Next, add the iptable rules for your OpenVPN server's port. Replace `1194` with your OpenVPN port if it is different. Replace `${ETH_ADAPTER}` with your desired ethernet adapter name if you do not wish to use the default defined below.
+The CLUSTER_KEY is a secret key used to encrypt cluster communications using
+the Blowfish algorithm. It should be between 8 and 56 ASCII characters long,
+longer is better, and must be the same on all members of the cluster.
 
-```shell
-ETH_ADAPTER=$(ip route | grep default | sed -e "s/^.*dev.//" -e "s/.proto.*//")
-sudo iptables -A INPUT -i ${ETH_ADAPTER} -m state --state NEW -p udp --dport 1194 -j ACCEPT
-sudo iptables -A FORWARD -i tun+ -o ${ETH_ADAPTER} -m state --state RELATED,ESTABLISHED -j ACCEPT
-sudo iptables -A FORWARD -i ${ETH_ADAPTER} -o tun+ -m state --state RELATED,ESTABLISHED -j ACCEPT
-```
+This key must be kept secret!
 
-<br />
+When blocks are sent around the cluster they will maintain their originals
+parameters, e.g. permanent/temporary, direction (in/out), ports, etc. All
+blocks are traded except for LT_POP3D and LT_IMAPD.
 
-Finally, set the adapter name `tun+` to have access to the `OUTPUT` chain. 
+The cluster uses 10 second timeouts in its communications, if the timeout is
+reached then that cluster members notification will be lost.
 
-The `+` symbol is a wildcard rule; which means that if you create multiple OpenVPN tunnels, they'll automatically be allowed through the OUTPUT chain, such as `tun1`, `tun2`, etc. If you only want one specific tunnel to be allowed, change `tun+` to `tun0`, or whatever tunnel you want to allow.
+Note: You must restart csf and then lfd after making any CLUSTER_* changes
 
-```shell
-sudo iptables  -A OUTPUT -o tun+ -j ACCEPT
-```
+lfd Cluster CLI and UI
+======================
 
-<br />
+See csf --help for the list of new CLI commands. Additional options will
+automatically become available in the UI once CLUSTER_SENDTO has been
+configured.
 
-Your OpenVPN server should now be able to allow connections between CSF / Iptables and OpenVPN.
+Only cluster members listed in CLUSTER_RECVFROM can send out requests to those
+members listed in CLUSTER_SENDTO.
 
-<br />
+Only the server listed in CLUSTER_MASTER will be accepted as the source of
+CLUSTER_CONFIG configuration option requests, such as:
+--cconfig, --cfile, --crestart
 
----
+The CLI options --cfile and --cfiler allow you to synchronise csf configuration
+files throughout a cluster from the CLUSTER_MASTER server.
 
-<br />
+There is currently only provision for permanent simple IP denies and allows
+from the CLI (i.e. not Allow/Deny Filters).
 
-## References for More Help
+The cluster PING sends a ping to each CLUSTER_SENDTO member which will report
+the request in their respective lfd.log files. This is intended as a test to
+confirm that cluster communications are functioning.
 
-If you need additional help apart from this guide to configure CSF; use the following pages for more help:
-- Chapter 1: [How to Install and Configure CSF Firewall on Linux](https://tecadmin.net/install-csf-firewall-on-linux/)
-- Chapter 2: [How to Enable CSF Firewall Web UI](https://tecadmin.net/how-to-enable-csf-firewall-web-ui/)
+The options to change the configuration option in csf.conf in cluster members
+should be used with caution to ensure that member specific options are not
+overwritten. The intention of the two options is that the --cconfig option be
+used if multiple changes are required and the final request is a --cconfigr to
+restart csf and lfd to effect the requested changes immediately.
 
-<br />
+A Note on lfd Cluster Security
+==============================
 
----
+The clustering option is undoubtedly powerful in allowing servers to
+pre-emptively block access attempts as one server is hit before the attack can
+spread to other members of the cluster.
 
-<br />
+This communication, however, does introduce a security risk. Since
+communications are made over the network, they are open to interception. Also,
+there is nothing to stop any local user from accessing the network port and
+sending data to it, though it will be discarded unless properly encrypted[*].
 
-## Questions & Answers
+There are security measures implemented to help mitigate attacks:
 
-Have a question? See if it's answered here:
+1. csf constructs iptables rules such that only cluster members can communicate
+over the cluster port with each other
 
-<br />
+2. The clustered servers will only accept data from connections from IPs listed
+in CLUSTER_RECVFROM or CLUSTER_MASTER
 
-<details>
-<summary>I can't get the statistics button to show</summary>
+3. [*]All communications are encrypted using the Blowfish symmetric block cipher
+through a Pure Perl cpan module using the Cipher Block Chaining module and the
+configured CLUSTER_KEY
 
-<br />
+4. CLUSTER_CONFIG set to 0 prevents the processing of configuration option
+requests
 
-In order to view statistics in CSF, you must ensure you do the following steps. First, enable the setting within `/etc/csf/csf.conf`:
+5. Only CLUSTER_MASTER will be accepted as the source of CLUSTER_CONFIG
+configuration option requests
 
-```bash
-ST_ENABLE = "1"
-```
+Should the configured secret key (passphrase) be compromised or guessed or a
+flaw found in the encryption modules or their implementation in csf, a
+malicious connection could reconfigure the csf firewall and then leverage a
+local or remote root escalation. This should be considered if you decide to use
+this option.
 
-<br />
+THERE ARE NO GUARANTEES OR WARRANTIES PROVIDED THAT THIS FACILITY IS SECURE AND
+ANY DAMAGE ARISING FROM THE EXPLOITATION OF THIS OPTION IS ENTIRELY AT YOUR OWN
+RISK.
 
-You can confirm the setting by running:
+19. Port Knocking
+#################
 
-```shell
-grep ST_ENABLE /etc/csf/csf.conf
+This option configures iptables to offer port knocking to open sensitive ports
+based on a sequence of knocked ports for the connecting IP address.
 
-# Should return:
-ST_ENABLE = "1"
-```
+For mor information on the idea of port knocking see:
+http://www.portknocking.org/
 
-<br />
+The feature requires that you list a random selection of unused ports (at least
+3) with a timeout. The ports you choose must not be in use and not appear in
+TCP_IN (UDP_IN for udp packets). The port to be opened must also not appear in
+TCP_IN (UDP_IN for udp packets).
 
-Next, ensure you have the `ServerStats` perl module installed:
+This feature does not work on servers that do not have the iptables module
+ipt_recent loaded. Typically, this will be with Monolithic kernels. VPS server
+admins should check with their VPS host provider that the iptables module is
+included.
 
-```shell
-ls -l /usr/local/csf/lib/ConfigServer/ServerStats.pm
+By default ipt_recent tracks only the last 100 IP addresses. The tracked IP
+addresses can be viewed in /proc/net/ipt_recent/*
 
-# Should return:
--rw------- 1 root root 138268 Aug 25 08:46 /usr/local/csf/lib/ConfigServer/ServerStats.pm
-```
+Syntax for the PORTKNOCKING setting:
 
-<br />
+PORTKNOCKING is a comma separated list of:
+openport;protocol;timeout;kport1;kport2;kport3[...;kportN]
 
-Finally, ensure you installed the perl module `GD::Graph / GD`:
+So, a setting of PORTKNOCKING = "22;TCP;20;100;200;300;400" means:
 
-```shell
-# Ubuntu/Debian
-sudo apt-get install -y libgd-graph-perl libgd-perl
+Open Port 22 TCP for 20 seconds to the connecting IP address to new connections
+once ports 100, 200, 300 and 400 have been accessed (i.e. knocked with a SYN
+packet) each knock being less than 20 seconds apart.
 
-# CentOS/RHEL
-sudo yum install -y perl-GDGraph perl-GD
-```
+Access to port 22 remains active after 20 seconds until the connection is
+dropped, however new connections will not be allowed.
 
-<br />
+More information about the ipt_recent module can be found in the iptables man
+page and at http://snowman.net/projects/ipt_recent/
 
-Then give CSF / LFD a restart:
+Note: IP addresses do not appear in any of the iptables chains when using this
+module. You must view the /proc/net/ipt_recent/* files as per the module
+documentation to view IP addresses in the various stages of the knock.
 
-```shell
-sudo csf -ra
-```
+Restarting csf resets the ipt_recent tables and removes all of the knocks.
 
-<br />
+20. Connection Limit Protection
+###############################
 
-You can also run the following command to test the required module. If no errors pop up, then you should be able to run the statistics functionality without issues:
+This option configures iptables to offer protection from DOS attacks against
+specific ports. It can also be used as a way to simply limit resource usage by
+IP address to specific server services. This option limits the number of new
+concurrent connections per IP address that can be made to specific ports.
 
-```shell
-perl /usr/local/csf/lib/ConfigServer/ServerStats.pm
-```
+This feature does not work on servers that do not have the iptables module
+xt_connlimit loaded. Typically, this will be with Monolithic kernels. VPS
+server admins should check with their VPS host provider that the iptables
+module is included.
 
-</details>
+Also, although included in some older versions or RedHat/CentOS, it was only
+actually available from v5.3+
 
-<br />
+The protection can only be applied to the TCP protocol.
 
-<details>
-<summary>What other perl modules are required?</summary>
+Syntax for the CONNLIMIT setting:
 
-<br />
+CONNLIMIT is a comma separated list of:
+port;limit
 
-You can confirm the required perl modules by running in terminal:
+So, a setting of CONNLIMIT = "22;5,80;20" means:
 
-```shell
-# Core modules (usually installed, but included for completeness)
-perl -MCPAN -e 'install strict'
-perl -MCPAN -e 'install warnings'
-perl -MCPAN -e 'install IO::Socket::INET'
-perl -MCPAN -e 'install Socket'
-perl -MCPAN -e 'install File::Path'
-perl -MCPAN -e 'install File::Basename'
-perl -MCPAN -e 'install File::Copy'
-perl -MCPAN -e 'install File::Temp'
-perl -MCPAN -e 'install Fcntl'
-perl -MCPAN -e 'install Time::Local'
-perl -MCPAN -e 'install POSIX'
-perl -MCPAN -e 'install IPC::Open3'
-perl -MCPAN -e 'install Sys::Hostname'
-perl -MCPAN -e 'install Cwd'
+1. Only allow up to 5 concurrent new connections to port 22 per IP address
 
-# ServerStats and web reporting modules
-perl -MCPAN -e 'install IO::Socket::SSL'
-perl -MCPAN -e 'install LWP::UserAgent'
-perl -MCPAN -e 'install HTTP::Request'
-perl -MCPAN -e 'install JSON'
-perl -MCPAN -e 'install Net::SSLeay'
-perl -MCPAN -e 'install Crypt::SSLeay'
-perl -MCPAN -e 'install Digest::MD5'
-perl -MCPAN -e 'install Digest::SHA'
+2. Only allow up to 20 concurrent new connections to port 80 per IP address
 
-# Optional / recommended modules for extended CSF features
-perl -MCPAN -e 'install Regexp::Common'
-perl -MCPAN -e 'install Email::Valid'
-perl -MCPAN -e 'install Time::HiRes'
-perl -MCPAN -e 'install Mail::Sendmail'
-perl -MCPAN -e 'install Net::SMTP'
-```
+Note: Existing connections are not included in the count, only new SYN packets,
+i.e. new connections
 
-<br />
+Note: Run /etc/csf/csftest.pl to check whether this option will function on the
+server
 
-Or if you’re on a Debian/Ubuntu system:
+21. Port/IP address Redirection
+###############################
 
-```shell
-apt-get install -y perl libio-socket-ssl-perl libwww-perl libjson-perl libnet-ssleay-perl libcrypt-ssleay-perl
-```
+This feature uses the file /etc/csf/csf.redirect which is a list of port and/or
+IP address assignments to direct traffic to alternative ports/IP addresses.
 
-<br />
+Requirements:
+nat tables
+ipt_DNAT iptables module
+ipt_SNAT iptables module
+ipt_REDIRECT iptables module
 
-On CentOS/RHEL:
+The following are the allowed redirection formats
 
-```shell
-yum install -y perl perl-IO-Socket-SSL perl-libwww-perl perl-JSON perl-Net-SSLeay perl-Crypt-SSLeay
-```
+DNAT (redirect from one IP address to a different one):
+IPx|*|IPy|*|tcp/udp - To IPx redirects to IPy
+IPx|portA|IPy|portB|tcp/udp - To IPx to portA redirects to IPy portB
 
-<br />
+DNAT examples:
+192.168.254.62|*|10.0.0.1|*|tcp
+192.168.254.62|666|10.0.0.1|25|tcp
 
-Or you can install using **CPAN**
+REDIRECT (redirect from port to a different one):
+IPx|portA|*|portB|tcp/udp - To IPx to portA redirects to portB
+*|portA|*|portB|tcp/udp - To portA redirects to portB
 
-```shell
-cpan install IO::Socket::SSL LWP::UserAgent JSON Net::SSLeay Crypt::SSLeay Digest::MD5 Digest::SHA Email::Valid
-```
+REDIRECT examples:
+*|666|*|25|tcp
+192.168.254.60|666|*|25|tcp
+192.168.254.4|666|*|25|tcp
 
-</details>
+Where a port is specified it cannot be a range, only a single port.
 
-<br />
+All redirections to another IP address will always appear on the destination
+server with the source of this server, not the originating IP address.
 
-<details>
-<summary>Are you officially taking over development on CSF?</summary>
+This feature is not intended to be used for routing, NAT, VPN, etc tasks
 
-<br />
+Note: /proc/sys/net/ipv4/ip_forward must be set to 1 for DNAT connections to
+work. csf will set this where it can, but if the kernel value cannot be set
+then the DNAT redirection many not work.
 
-_Yes. This repository will continue to release updates to Config Server Firewall, both bug fixes and new functionality._
+22. Integrated User Interface Feature
+#####################################
 
-</details>
+Integrated User Interface. This feature provides a HTML UI to the features of
+csf and lfd, without requiring a control panel or web server. The UI runs as a
+sub process to the lfd daemon.
 
-<br />
+As it runs under the root account and successful login provides root access
+to the server, great care should be taken when configuring and using this
+feature. There are additional restrictions to enhance secure access to the
+UI:
 
-<details>
-<summary>What happened to the dark theme?</summary>
+1. An SSL connection is required
+2. Separate ban and allow files are provided to only allow access to listed
+IP addresses
+3. Local IP addresses cannot connect to the UI (i.e. all IP addresses
+configured on the server NICs)
+4. Unique sessions, session timeouts, session cookies and browser headers are
+used to identify and restrict active sessions
 
-<br />
+Requirements:
 
-_After the original developer of CSF sadly stopped work on the app; this repository became a fork for the app itself, instead of just delivering themes and addons. It will be integrated into the app after all work is complete._
+1. openssl
+2. Perl modules: Net::SSLeay, IO::Socket::SSL and dependent modules
+4. SSL keys
+5. Entries in /etc/csf/ui/ui.allow
 
-</details>
+The SSL server uses the following files:
 
-<br />
+SSL Key goes into /etc/csf/ui/server.key
+SSL Certificate goes into /etc/csf/ui/server.crt
 
-<details>
-<summary>Will cPanel continue to support CSF?</summary>
+Preferably, real CA signed certificates should be used. You can use an
+existing domain and cert for accessing the UI by populating the two files
+mentioned. If the cert has a ca bundle, it should be appended to the server.crt
+file. lfd must be restarted after making any changes:
+http://httpd.apache.org/docs/current/ssl/ssl_faq.html#realcert
 
-<br />
+Alternatively, you could generate your own self-signed certificate:
+http://httpd.apache.org/docs/current/ssl/ssl_faq.html#selfcert
 
-_I cannot say for certain. Nobody from cPanel has reached out to me. I hope they continue to support it._
+Any keys used must have their pass-phrase removed:
+http://httpd.apache.org/docs/current/ssl/ssl_faq.html#removepassphrase
 
-</details>
+The login URL should use the domain you have listed in the self-signed cert:
+https://<yourdomain>:<port>
 
-<br />
+For example: https://www.somedomain.com:6666
 
-<details>
-<summary>What about documentation?</summary>
+Your browser must accept session cookies to gain access.
 
-<br />
+UI_ALLOW is enabled by default, so IP addresses (or CIDRs) allowed to use this
+UI must be listed in /etc/csf/ui/ui.allow before trying to connect to the UI.
 
-_Docs are available at [https://aetherinox.github.io/csf-firewall/](https://aetherinox.github.io/csf-firewall/). They are a work in progress and consume a lot of time writing. So please be patient while it gets more populated as time goes on._
+Only IP addresses can be listed/used in /etc/csf/ui/ui.ban - this file should
+only be used by the UI to prevent login. Use csf blocks to prevent access to
+the configured port and only use Advanced Allow/Deny Filters for access, i.e.
+do not list the port in TCP_IN.
 
-</details>
+Logging for UI events are logged to the lfd /var/log/lfd.log file. Check this
+file if you are unable to access the UI.
 
-<br />
+Required Perl Modules:
 
-<details>
-<summary>I see emojis, is this written with AI?</summary>
+For example, on Debian v6 the perl modules can be installed using:
 
-<br />
+apt-get install libio-socket-ssl-perl libcrypt-ssleay-perl \
+libnet-libidn-perl libio-socket-inet6-perl libsocket6-perl
 
-_I'm not a fan of AI. I guess it has a purpose, and if you enjoy using it, that's fine. I have a few select emojis that I use which indicate whether my docs are talking about a folder, file, or to note something of importance. I have written it all by hand._
+For example, on CentOS v6 the perl modules can be installed using:
 
-</details>
+yum install perl-IO-Socket-SSL.noarch perl-Net-SSLeay perl-Net-LibIDN \
+perl-IO-Socket-INET6 perl-Socket6
 
-<br />
+23. IP Block Lists
+##################
 
----
+This feature allows csf/lfd to periodically download lists of IP addresses and
+CIDRs from pubished block or black lists. It is controlled by the file:
+/etc/csf/csf.blocklists
 
-<br />
+Uncomment the line starting with the rule name to use it, then restart csf and
+then lfd.
 
-## Contributors ✨
+Each block list must be listed on per line: as NAME|INTERVAL|MAX|URL
+NAME : List name with all uppercase alphabetic characters with no
+spaces and a maximum of 25 characters - this will be used as the
+iptables chain name
+INTERVAL: Refresh interval to download the list, must be a minimum of 3600
+seconds (an hour), but 86400 (a day) should be more than enough
+MAX : This is the maximum number of IP addresses to use from the list,
+a value of 0 means all IPs
+URL : The URL to download the list from
 
-We are always looking for contributors. If you feel that you can provide something useful to Gistr, then we'd love to review your suggestion. Before submitting your contribution, please review the following resources:
+Note: Some of thsese lists are very long (thousands of IP addresses) and
+could cause serious network and/or performance issues, so setting a value for
+the MAX field should be considered.
 
-- [Pull Request Procedure](.github/PULL_REQUEST_TEMPLATE.md)
-- [Contributor Policy](CONTRIBUTING.md)
+After making any changes to this file you must restart csf and then lfd.
 
-<br />
+If you want to redownload a blocklist you must first delete
+/var/lib/csf/csf.block.NAME and then restart csf and then lfd.
 
-Want to help but can't write code?
-- Review [active questions by our community](https://github.com/Aetherinox/csf-firewall/labels/help%20wanted) and answer the ones you know.
+Each URL is scanned for an IP/CIDR address per line and if found is blocked.
 
-<br />
+24. Mitigating issues with syslog/rsyslog logs (RESTRICT_SYSLOG)
+##############################################
 
-![Alt](https://repobeats.axiom.co/api/embed/a968656a3592fa904ffbcc3abd666aa2d40b8648.svg "Repobeats analytics image")
+Unfortunately, it is trivial for end-users and scripts run by end-users to
+spoof log lines that appear identical to any log line reported in logs
+maintained by syslog/rsyslog. You can identify these logs by looking in
+/etc/syslog.conf or /etc/rsyslog.conf
 
-<br />
+This means that anyone on the server can maliciously trigger applications that
+monitor these logs, such as lfd does for the following options:
 
-The following people have helped get this project going:
+LF_SSHD LF_FTPD LF_IMAPD LF_POP3D LF_BIND LF_SUHOSIN LF_SSH_EMAIL_ALERT
+LF_SU_EMAIL_ALERT LF_CONSOLE_EMAIL_ALERT LF_DISTATTACK LF_DISTFTP
+LT_POP3D LT_IMAPD PS_INTERVAL UID_INTERVAL WEBMIN_LOG LF_WEBMIN_EMAIL_ALERT
+PORTKNOCKING_ALERT ST_ENABLE SYSLOG_CHECK LOGSCANNER CUSTOM*_LOG
 
-<br />
+A malicious user could use this issue to trigger confusing emails regarding
+both successful and failed login attempts, kernel log lines (including iptables
+log lines) etc. Unfortunately, there is very little that can be done about this
+as syslog/rsyslog has no security framework. Some attempt was made in newer
+versions of rsyslog, but this version is not available in the current versions
+used by RedHat/CentOS v6. It also has to be enabled and can will have adverse
+effects on utilities that expect a certain format for the log lines.
 
-<div align="center">
+To mitigate spoofing attempts we recommend the following, if you are willing to
+accept the consequences of spoofed log lines:
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![Contributors][contribs-all-img]](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+1. We recommend setting RESTRICT_SYSLOG to "3" for use with option
+RESTRICT_SYSLOG_GROUP to restrict access to the syslog/rsyslog unix socket(s)
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top"><a href="https://gitlab.com/Aetherinox"><img src="https://avatars.githubusercontent.com/u/118329232?v=4?s=40" width="80px;" alt="Aetherinox"/><br /><sub><b>Aetherinox</b></sub></a><br /><a href="https://github.com/Aetherinox/csf-firewall/commits?author=Aetherinox" title="Code">💻</a> <a href="#projectManagement-Aetherinox" title="Project Management">📆</a> <a href="#fundingFinding-Aetherinox" title="Funding Finding">🔍</a></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+2. Go through the options above ensuring that only those that you need are
+enabled
 
-<br />
-<br />
+3. Ensure that DENY_IP_LIMIT and DENY_TEMP_IP_LIMIT are set reasonably low (for
+example, 200). This will limit attempts to block large numbers of IP addresses
 
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
+4. Ensure that administrator/support IP addresses are listed in
+/etc/csf/csf.allow and perhaps /etc/csf/csf.ignore. This will prevent malicious
+blocking from denying you access to the server
 
-<!-- BADGE > GENERAL -->
-  [general-npmjs-uri]: https://npmjs.com
-  [general-nodejs-uri]: https://nodejs.org
-  [general-npmtrends-uri]: http://npmtrends.com/csf-firewall
+5. To confirm successful logins to SSH, use the "last" utility from the root
+shell, e.g.:
 
-<!-- BADGE > VERSION > GITHUB -->
-  [github-version-img]: https://img.shields.io/github/v/tag/Aetherinox/csf-firewall?logo=GitHub&label=Version&color=ba5225
-  [github-version-uri]: https://github.com/Aetherinox/csf-firewall/releases
+last -da
 
-<!-- BADGE > VERSION > NPMJS -->
-  [npm-version-img]: https://img.shields.io/npm/v/csf-firewall?logo=npm&label=Version&color=ba5225
-  [npm-version-uri]: https://npmjs.com/package/csf-firewall
+6. Regularly check the server and user data for exploits, old vulnerable
+applications and out of date OS applications
 
-<!-- BADGE > VERSION > PYPI -->
-  [pypi-version-img]: https://img.shields.io/pypi/v/csf-firewall-plugin
-  [pypi-version-uri]: https://pypi.org/project/csf-firewall-plugin/
+7. Consider carefully any application that you use that centralises actions and
+syslog/rsyslog logs and the implications of spoofed log lines
 
-<!-- BADGE > LICENSE > MIT -->
-  [license-mit-img]: https://img.shields.io/badge/MIT-FFF?logo=creativecommons&logoColor=FFFFFF&label=License&color=9d29a0
-  [license-mit-uri]: https://github.com/Aetherinox/csf-firewall/blob/main/LICENSE
+8. Consider the implications of this overall issue on applications and scripts
+other than csf/lfd that use the affected log files
 
-<!-- BADGE > GITHUB > DOWNLOAD COUNT -->
-  [github-downloads-img]: https://img.shields.io/github/downloads/Aetherinox/csf-firewall/total?logo=github&logoColor=FFFFFF&label=Downloads&color=376892
-  [github-downloads-uri]: https://github.com/Aetherinox/csf-firewall/releases
+9. Do not enable syslog/rsyslog reception via UDP/TCP ports
 
-<!-- BADGE > NPMJS > DOWNLOAD COUNT -->
-  [npmjs-downloads-img]: https://img.shields.io/npm/dw/%40aetherinox%2Fcsf-firewall?logo=npm&&label=Downloads&color=376892
-  [npmjs-downloads-uri]: https://npmjs.com/package/csf-firewall
+10. For CloudLinux clients utilizing CageFS this can be prevented by limiting
+access to /dev/log inside CageFS.
+For that remove file: /etc/rsyslog.d/schroot.conf
+Or remove this line from that file:
+$AddUnixListenSocket /usr/share/cagefs-skeleton/dev/log
 
-<!-- BADGE > GITHUB > DOWNLOAD SIZE -->
-  [github-size-img]: https://img.shields.io/github/repo-size/Aetherinox/csf-firewall?logo=github&label=Size&color=59702a
-  [github-size-uri]: https://github.com/Aetherinox/csf-firewall/releases
+That will prevent end user's access to /dev/log, preventing them from spoofing.
+However, this does also break cron job logging.
 
-<!-- BADGE > NPMJS > DOWNLOAD SIZE -->
-  [npmjs-size-img]: https://img.shields.io/npm/unpacked-size/csf-firewall/latest?logo=npm&label=Size&color=59702a
-  [npmjs-size-uri]: https://npmjs.com/package/csf-firewall
+25. Exim SMTP AUTH Restriction
+##############################
 
-<!-- BADGE > CODECOV > COVERAGE -->
-  [codecov-coverage-img]: https://img.shields.io/codecov/c/github/Aetherinox/csf-firewall?token=MPAVASGIOG&logo=codecov&logoColor=FFFFFF&label=Coverage&color=354b9e
-  [codecov-coverage-uri]: https://codecov.io/github/Aetherinox/csf-firewall
+The option SMTPAUTH_RESTRICT will only allow SMTP AUTH to be advertised to the
+IP addresses listed in /etc/csf/csf.smtpauth plus the localhost IP addresses.
 
-<!-- BADGE > ALL CONTRIBUTORS -->
-  [contribs-all-img]: https://img.shields.io/github/all-contributors/Aetherinox/csf-firewall?logo=contributorcovenant&color=de1f6f&label=contributors
-  [contribs-all-uri]: https://github.com/all-contributors/all-contributors
+The additional option CC_ALLOW_SMTPAUTH can be used with this option to
+additionally restrict access to specific countries.
 
-<!-- BADGE > GITHUB > BUILD > NPM -->
-  [github-build-img]: https://img.shields.io/github/actions/workflow/status/Aetherinox/csf-firewall/npm-release.yml?logo=github&logoColor=FFFFFF&label=Build&color=%23278b30
-  [github-build-uri]: https://github.com/Aetherinox/csf-firewall/actions/workflows/npm-release.yml
+This is to help limit attempts at distributed attacks against SMTP AUTH which
+are difficult to achive since port 25 needs to be open to relay email.
 
-<!-- BADGE > GITHUB > BUILD > Pypi -->
-  [github-build-pypi-img]: https://img.shields.io/github/actions/workflow/status/Aetherinox/csf-firewall/release-pypi.yml?logo=github&logoColor=FFFFFF&label=Build&color=%23278b30
-  [github-build-pypi-uri]: https://github.com/Aetherinox/csf-firewall/actions/workflows/pypi-release.yml
+The reason why this works is that if EXIM does not advertise SMTP AUTH on a
+connection, then SMTP AUTH will not accept logins, defeating the attacks
+without restricting mail relaying.
 
-<!-- BADGE > GITHUB > TESTS -->
-  [github-tests-img]: https://img.shields.io/github/actions/workflow/status/Aetherinox/csf-firewall/npm-tests.yml?logo=github&label=Tests&color=2c6488
-  [github-tests-uri]: https://github.com/Aetherinox/csf-firewall/actions/workflows/npm-tests.yml
+Note: csf and lfd must be restarted if /etc/csf/csf.smtpauth is modified so
+that the lookup file in /etc/exim.smtpauth is regenerated from the information
+from /etc/csf/csf.smtpauth, the localhost IP addresses, plus any countries
+listed in CC_ALLOW_SMTPAUTH
 
-<!-- BADGE > GITHUB > COMMIT -->
-  [github-commit-img]: https://img.shields.io/github/last-commit/Aetherinox/csf-firewall?logo=conventionalcommits&logoColor=FFFFFF&label=Last%20Commit&color=313131
-  [github-commit-uri]: https://github.com/Aetherinox/csf-firewall/commits/main/
+To make this option work you MUST make the following modifications to your
+exim.conf:
 
-<!-- prettier-ignore-end -->
-<!-- markdownlint-restore -->
+On cPanel servers you can do this by:
+=====================================
+
+1. Navigate to WHM > Exim Configuration Manager > Advanced Editor
+
+2. Search within the window and ensure that "auth_advertise_hosts" has not been
+set
+
+3. Scroll down and click "Add additional configuration setting"
+
+4. From the drop-down box select "auth_advertise_hosts"
+
+5. In the input box after the = sign add the following on one line:
+
+${if match_ip{$sender_host_address}{iplsearch;/etc/exim.smtpauth}{*}{}}
+
+6. Scroll to the bottom and click "Save"
+
+7. That should be all that is required after having made any necessary changes
+within csf.conf and restarting csf and then lfd
+
+8. Be sure to test extensively to ensure the option works as expected
+
+To reverse this change:
+
+1. Navigate to WHM > Exim Configuration Manager > Advanced Editor
+
+2. Search within the window for "auth_advertise_hosts"
+
+3. Click the wastebasket icon next to the option (if there is no wastebasket
+you should be able to change the setting to * to advertise to all IP's)
+
+4. Scroll to the bottom and click "Save"
+
+5. Disable SMTPAUTH_RESTRICT and CC_ALLOW_SMTPAUTH in csf.conf and then restart
+csf and then lfd
+
+Alternatively, on cPanel:
+=========================
+
+1. Edit /etc/exim.conf.local and add the following line to an @CONFIG@ section
+all on one line:
+
+auth_advertise_hosts = ${if match_ip{$sender_host_address}{iplsearch;/etc/exim.smtpauth}{*}{}}
+
+2. Rebuild the exim configuration:
+
+/scripts/buildeximconf
+service exim restart
+
+3. Be sure to test extensively to ensure the option works as expected
+
+On non-cPanel platforms:
+========================
+
+1. Modify your active exim.conf and add the following as a single line near the
+top all on one line:
+
+auth_advertise_hosts = ${if match_ip{$sender_host_address}{iplsearch;/etc/exim.smtpauth}{*}{}}
+
+2. Restart exim
+
+3. Be sure to test extensively to ensure the option works as expected
+
+26. UI Skinning and Mobile View
+###############################
+
+The csf UI provided through cPanel, DirectAdmin, Webmin and the integrated UI
+via lfd, all user the Bootstrap and jQuery frameworks. Additional styling is
+added to complement the frameworks and the UI flow.
+
+If you want to make changes to the styling or add jQuery or JavaScript code you
+can create:
+
+1. A text file /etc/csf/csf.header which will be included in each of
+the UI pages before the closing </head> tag
+
+2. A text file /etc/csf/csf.body which will be included in each of the UI
+pages after the opening <body> tag[*]
+
+3. A text file /etc/csf/csf.footer which will be included in each of the UI
+pages before the closing </body> tag
+
+The html tag will also have a data-post field containing the internal action
+being performed by the UI.
+
+You can also make additions to the <html> and <body> tags by creating
+/etc/csf/csf.htmltag and /etc/csf/csf.bodytag respectively[*]. Additions made
+in these files MUST all be on a single line at the top of the file, anything
+else will be ignored. The text will then be placed within the respective tag,
+e.g. if you want <body data-name='result'> you would put the following on a
+single line in /etc/csf/csf.bodytag:
+data-name='result'
+
+[*] This functionality is ONLY available on webmin servers
+
+The Mobile View feature has a breakpoint of 600px which will initiate the full
+browser subset of UI features. This may mean breaking out of framesets in some
+control panels, so a return to the main control panel window is included. Also
+switching back to the Desktop view will remain in the full browser display.
+
+If you switch to the Mobile View and then switch to main control panel window
+further accesses to the UI will always default to the Mobile View. If you
+switch back after returning to the Desktop View, subsequent access will default
+to that view. This reverts back to the default breakpoint behaviour in new
+browser sessions as the system uses session cookies to keep track of the chosen
+view which are reset one browser shutdown.
+
+There are options in csf.conf that control the behaviour of these options under
+STYLE_*. Any styling changes MUST respect these options.
+
+Note: We do NOT recommend reformatting the UI output as any changes in the core
+code may not be reflected in the user experience and can break the product.
+Only style changes should be made.
+
+27. CloudFlare
+##############
+
+This features provides interaction with the CloudFlare Firewall.
+
+As CloudFlare is a reverse proxy, any attacking IP addresses (so far as
+iptables is concerned) come from the CloudFlare IP's. To counter this, an
+Apache module (mod_cloudflare) is available that obtains the true attackers
+IP from a custom HTTP header record (similar functionality is available
+for other HTTP daemons.
+
+However, despite now knowing the true attacking IP address, iptables cannot
+be used to block that IP as the traffic is still coming from the CloudFlare
+servers.
+
+CloudFlare have provided a Firewall feature within the user account where
+rules can be added to block, challenge or whitelist IP addresses.
+
+Using the CloudFlare API, this feature adds and removes attacking IPs from that
+firewall and provides CLI (and via the UI) additional commands.
+
+There are several restrictions to using this feature:
+
+1. All lfd blocks will be temporary blocks so that csf/lfd can keep blocks in
+sync with CloudFlare
+
+2. Automatic blocks via lfd are limited to LF_MODSEC and LF_CXS triggers as
+only through these can the domain name be determined. Any users that own
+domains that are involved in the trigger will get a block in their
+CloudFlare Firewall. Additionally, any users with the special case "any"
+will also get blocks
+
+3. The temporary/permanent config of the lfd settings are ignored and CF_TEMP
+is used instead
+
+4. LF_TRIGGER must not be used, the feature will not work with it enabled
+
+5. mod_cloudflare or similar must be used to report real IP in the Apache logs
+
+6. URLGET must be set to 2 (i.e. LWP) must be used
+
+7. If PERMBLOCK is used, the last tempblock will remain and never be cleared.
+So any CloudFlare Firewall entries must be manually cleared in CloudFlare
+or via CLI
+
+8. There are restrictions imposed by CloudFlare to the number of rules that
+can be created depending on the type of account used. See
+https://goo.gl/ssGu7v for more information
+
+9. When restarting csf, any old temporary blocks will still be created for lfd
+to clear when it restarts
+
+10. All interaction with CloudFlare is at User-level, not Zone-level
+
+11. If using the CloudFlare cPanel user plugin, it must be v7+
+
+CF_TEMP should be configured taking into account the maximum number of rules
+that the CloudFlare account allows: https://goo.gl/ssGu7v
+
+All CloudFlare users for the domains that are involved in LF_MODSEC and
+LF_CXS triggers will have a CloudFlare rule added. Any CloudFlare account
+configured to use the special case "any" field value in csf.cloudflare will
+have a CloudFlare rule added regardless of domain.
+
+NOTE: You should always list the CloudFlare IP addresses in /etc/csf/csf.ignore
+to prevent them from being blocked by lfd from https://www.cloudflare.com/ips/
+
+CLI commands
+============
+
+There are also accompanying csf CLI commands available (see man) to interact
+with the Cloudflare firewall.
+
+Enabling CF_ENABLE enables two CloudFlare buttons in the UI in the "Other"
+section that mirror the CLI commands.
+
+1. Using the CLI commands all, block, challenge or whitelist rules in the
+provided users CloudFlare firewall can be listed, e.g.:
+
+csf --cloudflare list all [user1,user2,...]
+
+2. Block, challenge and whitelist rules can be added for IPs to the provided
+users CloudFlare firewall, e.g.:
+
+csf --cloudflare add challenge 11.22.33.44 [user1,user2,...]
+
+Note: These rules are NOT cleared by lfd and do NOT create an equivalent
+iptables rule in csf)
+
+3. Rules can be deleted for IPs to the provided users CloudFlare firewall,
+e.g.:
+
+csf --cloudflare del 11.22.33.44 [domain,domain2,...]
+
+Note: These rules are NOT cleared in csf if they exist
+
+4. Domains can also be used instead of users, or a mixture of both e.g.:
+
+csf --cloudflare list all [user,user2,domain,...]
+
+5. IPs can be added both the users CloudFlare firewall and to csf as temporary
+allow or deny, e.g.:
+
+csf --cloudflare tempadd deny 11.22.33.44 [user1,user2,...]
+
+Note: This applies the allow/deny for the IP address in csf for CF_TEMP seconds
+as well as the users CloudFlare Firewall. Once the temporary entry expires lfd
+removes the IP address from both csf (as normal) as well as the users
+CloudFlare Firewall.
+
+Note: Any CloudFlare account configured to use the special case "any" field
+value in csf.cloudflare will also have a CloudFlare rule added.
+
+Note: In the above IP addresses are used as the target for each rule. However,
+the target can be one of:
+. An IP address
+. 2 letter Country Code
+. IP range CIDR
+Only Enterprise customers can "block" a Country Code, but all can "allow" and
+"challenge". IP range CIDR is limited to /16 and /24.
+
+6. To manually remove an IP block that was blocked via CF_ENABLE in lfd or by
+using "tempadd" use the normal csf temp CLI commands. This will remove the
+rules from both iptables and the users CloudFlare firewall, e.g.:
+
+csf --tr 44.33.22.11
+
+28. InterWorx
+#############
+
+InterWorx integration is available for csf. The installation makes changes to
+the underlying InterWorx installation due to its current dependence on APF. To
+cater for this, installing csf will replace /etc/apf/apf with a stub script
+that redirects commands to csf. The script is then chattr +ia to prevent it
+being overwritten.
+
+Note: None of the apf conf files are used and are ignored by csf.
+
+The Firewall UI option in NodeWorx should now not be used and any changes made
+there will not be reflected in iptables.
+
+There is a UI option under "ConfigServer Services" for "ConfigServer Firewall &
+Security" that should now be used.
+
+The installation will also replace the Firewall page in NodeWorx with a dummy
+page stating that csf should be used instead. lfd will replace the page upon
+restart incase of upgrades to InterWorx. If you want to disable this behaviour,
+create an empty file as follows:
+
+touch /etc/cxs/interworx.firewall
+
+The InterWorx plugin for csf is auto-enabled. Enabling or Disabling the
+InterWorx plugin has no effect on csf itself, only the UI plugin presence.
+
+NOTE: Unless you have configured a root forwarder, you should edit the csf
+configuration settings in /etc/csf/csf.conf or via the UI and set LF_ALERT_TO
+to a suitable email address. After making any changes, restart csf and then
+lfd.
+
+28. CentOS Web Panel (CWP)
+##########################
+
+CWP integration is available for csf. Since CWP already has some custom
+modifications, these have been taken into account. To access the now inbuilt UI
+in CWP, there is a new menu option in CWP > ConfigServer Scripts > ConfigServer
+Firewall.
+
+There is now an option in /etc/csf/csf.conf for LF_CWP for login failure
+detection. However, this WILL NOT work with the default CWP installation as
+there is a custom entry in /etc/csf/regex.custom.pm. The now official detection
+will be ignored while this is in place.
+
+If you want to use the now inbuilt detection you must edit
+/etc/csf/regex.custom.pm and remove the 3 lines that comprise the custom entry
+and then restart lfd.
